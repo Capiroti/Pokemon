@@ -1,0 +1,16 @@
+#ID#NOME#TIPO#SEXO#FOTO#ALTURA#PESO#LEVEL#MAXHP#ATAQUE#DEFESA#SP.ATAQUE#SP.DEFESA#VELOCIDADE#DESCRICAO
+009
+Blastoise
+AGUA
+M
+sprites/Blastoise
+1.6
+85.5
+21
+45
+3
+3
+3
+3
+3
+Ele esmaga seu inimigo sob seu corpo pesado para causar desmaios. Em uma pitada, que vai retirar dentro de sua concha.

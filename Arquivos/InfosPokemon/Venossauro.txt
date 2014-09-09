@@ -1,0 +1,16 @@
+#ID#NOME#TIPO#SEXO#FOTO#ALTURA#PESO#LEVEL#MAXHP#ATAQUE#DEFESA#SP.ATAQUE#SP.DEFESA#VELOCIDADE#DESCRICAO
+003
+Venossauro
+PLANTA
+N
+sprites/Venossauro
+2.0
+100.0
+24
+52
+4
+4
+6
+4
+4
+Ao espalhar as grandes pétalas de sua flor e capturar os raios do sol, enche o corpo com o poder.

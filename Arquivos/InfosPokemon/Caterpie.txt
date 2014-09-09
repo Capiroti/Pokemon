@@ -1,0 +1,17 @@
+#ID#NOME#TIPO#SEXO#FOTO#ALTURA#PESO#LEVEL#MAXHP#ATAQUE#DEFESA#SP.ATAQUE#SP.DEFESA#VELOCIDADE#DESCRICAO
+010
+Caterpie
+INSETO
+N
+sprites/Caterpie
+0.3
+2.9
+1
+13
+2
+2
+1
+1
+3
+Para a proteção, ele libera um cheiro horrível de suas antenas em sua cabeça para afastar os inimigos.
+
