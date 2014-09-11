@@ -13,4 +13,4 @@ sprites/Arbok
 3
 3
 4
-O padrão em sua barriga parece ser um rosto assustador. Inimigos fracos fugirão apenas com a visão do padrão.
+O padrão em sua barriga parece ser o de um rosto assustador. Inimigos fracos fugirão apenas com a visão do padrão.
