@@ -62,7 +62,7 @@ bool Pokemon::GerenciaHP()
 }
 void Pokemon::GerenciaExperiencia()
 {
-	cout << "Gerenciando Experiencia!!!" << endl;
+	cout << "Gerenciando Experiencia" << endl;
 }
 void Pokemon::AplicaVantagem()
 {
