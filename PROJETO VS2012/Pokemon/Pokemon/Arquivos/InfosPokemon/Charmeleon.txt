@@ -1,0 +1,16 @@
+#ID#NOME#TIPO#SEXO#FOTO#ALTURA#PESO#LEVEL#MAXHP#ATAQUE#DEFESA#SP.ATAQUE#SP.DEFESA#VELOCIDADE#DESCRICAO
+005
+Charmeleon
+FOGO
+N
+sprites/Charmander
+1.1
+19.0
+9
+35
+3
+3
+4
+3
+4
+Ele ataca com sua cauda para derrubar seu inimigo. Em seguida, ele rasga o adversário caíndo com garras afiadas.

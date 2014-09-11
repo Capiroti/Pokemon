@@ -1,0 +1,16 @@
+#ID#NOME#TIPO#SEXO#FOTO#ALTURA#PESO#LEVEL#MAXHP#ATAQUE#DEFESA#SP.ATAQUE#SP.DEFESA#VELOCIDADE#DESCRICAO
+021
+Spearow
+VOADOR
+N
+sprites/Spearow
+0.3
+2.0
+4
+22
+3
+2
+2
+1
+4
+Muito protetor de seu território, ele bate as asas curtas para lançar dardos ao redor em alta velocidade.
