@@ -1,0 +1,39 @@
+﻿Build started 11/09/2014 19:56:04.
+     1>Project "C:\Users\Windows 7\Documents\GitHub\Projeto Pokemon\projetos\Pokemon\base.vcxproj" on node 2 (Build target(s)).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V110\Microsoft.CppBuild.targets(346,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
+     1>ClCompile:
+         D:\Visu\VC\bin\CL.exe /c /I../../libUnicornio/SDL2/include /I../../libUnicornio/include /I../../libUnicornio/include/Eventos /I../../libUnicornio/include/Interface /I../../libUnicornio/include/Midia /I../../libUnicornio/include/TileMap /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt /I../../libEGL/ Jogo.cpp
+         Jogo.cpp
+         RELEASE UNICORNIO: added libs: sdl2.lib sdl2main.lib sdl2_image.lib sdl2_ttf.lib sdl2_mixer.lib
+     1>C:\Users\Windows 7\Documents\GitHub\Projeto Pokemon\libUnicornio\include\Eventos\Eventos.h(58): warning C4305: 'initializing' : truncation from 'double' to 'float'
+       Link:
+         D:\Visu\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"bin\base.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:".\bin\base.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\bin\base.lib" /MACHINE:X86 /SAFESEH Release\Jogo.obj
+         Release\main.obj
+         Release\Personagem.obj
+         Release\Pessoa.obj
+         Release\Pokemon.obj
+         Release\PokemonAgua.obj
+         Release\PokemonFogo.obj
+         Release\PokemonPlanta.obj
+         Generating code
+         Finished generating code
+     1>libUnicornio.lib(libUnicornio.obj) : warning LNK4099: PDB 'vc110.pdb' was not found with 'libUnicornio.lib(libUnicornio.obj)' or at 'C:\Users\Windows 7\Documents\GitHub\Projeto Pokemon\projetos\Pokemon\bin\vc110.pdb'; linking object as if no debug info
+     1>libUnicornio.lib(SpriteSheet.obj) : warning LNK4099: PDB 'vc110.pdb' was not found with 'libUnicornio.lib(SpriteSheet.obj)' or at 'C:\Users\Windows 7\Documents\GitHub\Projeto Pokemon\projetos\Pokemon\bin\vc110.pdb'; linking object as if no debug info
+     1>libUnicornio.lib(Sprite.obj) : warning LNK4099: PDB 'vc110.pdb' was not found with 'libUnicornio.lib(Sprite.obj)' or at 'C:\Users\Windows 7\Documents\GitHub\Projeto Pokemon\projetos\Pokemon\bin\vc110.pdb'; linking object as if no debug info
+     1>libUnicornio.lib(Eventos.obj) : warning LNK4099: PDB 'vc110.pdb' was not found with 'libUnicornio.lib(Eventos.obj)' or at 'C:\Users\Windows 7\Documents\GitHub\Projeto Pokemon\projetos\Pokemon\bin\vc110.pdb'; linking object as if no debug info
+     1>libUnicornio.lib(Texto.obj) : warning LNK4099: PDB 'vc110.pdb' was not found with 'libUnicornio.lib(Texto.obj)' or at 'C:\Users\Windows 7\Documents\GitHub\Projeto Pokemon\projetos\Pokemon\bin\vc110.pdb'; linking object as if no debug info
+     1>libUnicornio.lib(EventosMouse.obj) : warning LNK4099: PDB 'vc110.pdb' was not found with 'libUnicornio.lib(EventosMouse.obj)' or at 'C:\Users\Windows 7\Documents\GitHub\Projeto Pokemon\projetos\Pokemon\bin\vc110.pdb'; linking object as if no debug info
+     1>libUnicornio.lib(EventosJoysticks.obj) : warning LNK4099: PDB 'vc110.pdb' was not found with 'libUnicornio.lib(EventosJoysticks.obj)' or at 'C:\Users\Windows 7\Documents\GitHub\Projeto Pokemon\projetos\Pokemon\bin\vc110.pdb'; linking object as if no debug info
+     1>libUnicornio.lib(EventosAplicacao.obj) : warning LNK4099: PDB 'vc110.pdb' was not found with 'libUnicornio.lib(EventosAplicacao.obj)' or at 'C:\Users\Windows 7\Documents\GitHub\Projeto Pokemon\projetos\Pokemon\bin\vc110.pdb'; linking object as if no debug info
+     1>libUnicornio.lib(Fonte.obj) : warning LNK4099: PDB 'vc110.pdb' was not found with 'libUnicornio.lib(Fonte.obj)' or at 'C:\Users\Windows 7\Documents\GitHub\Projeto Pokemon\projetos\Pokemon\bin\vc110.pdb'; linking object as if no debug info
+     1>libUnicornio.lib(GerenciadorDeRecursos.obj) : warning LNK4099: PDB 'vc110.pdb' was not found with 'libUnicornio.lib(GerenciadorDeRecursos.obj)' or at 'C:\Users\Windows 7\Documents\GitHub\Projeto Pokemon\projetos\Pokemon\bin\vc110.pdb'; linking object as if no debug info
+     1>libUnicornio.lib(EventosToque.obj) : warning LNK4099: PDB 'vc110.pdb' was not found with 'libUnicornio.lib(EventosToque.obj)' or at 'C:\Users\Windows 7\Documents\GitHub\Projeto Pokemon\projetos\Pokemon\bin\vc110.pdb'; linking object as if no debug info
+     1>libUnicornio.lib(EventosTeclado.obj) : warning LNK4099: PDB 'vc110.pdb' was not found with 'libUnicornio.lib(EventosTeclado.obj)' or at 'C:\Users\Windows 7\Documents\GitHub\Projeto Pokemon\projetos\Pokemon\bin\vc110.pdb'; linking object as if no debug info
+     1>libUnicornio.lib(EventosiOS.obj) : warning LNK4099: PDB 'vc110.pdb' was not found with 'libUnicornio.lib(EventosiOS.obj)' or at 'C:\Users\Windows 7\Documents\GitHub\Projeto Pokemon\projetos\Pokemon\bin\vc110.pdb'; linking object as if no debug info
+     1>libUnicornio.lib(Som.obj) : warning LNK4099: PDB 'vc110.pdb' was not found with 'libUnicornio.lib(Som.obj)' or at 'C:\Users\Windows 7\Documents\GitHub\Projeto Pokemon\projetos\Pokemon\bin\vc110.pdb'; linking object as if no debug info
+         base.vcxproj -> C:\Users\Windows 7\Documents\GitHub\Projeto Pokemon\projetos\Pokemon\.\bin\base.exe
+     1>Done Building Project "C:\Users\Windows 7\Documents\GitHub\Projeto Pokemon\projetos\Pokemon\base.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.55
