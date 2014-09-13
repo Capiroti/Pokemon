@@ -1,5 +1,10 @@
 #include "Pessoa.h"
 
+Sprite* Pessoa::getSprite()
+{
+	return &sprite;
+}
+
 Pessoa::Pessoa()
 {
 }
@@ -28,6 +33,7 @@ void Pessoa::Falar()
 {
 	cout << "Estou Falando!!!" << endl;
 }
+
 void Pessoa::Andar()
 {
 	cout << "Estou Andando!!!" << endl;

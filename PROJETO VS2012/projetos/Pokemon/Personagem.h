@@ -26,4 +26,3 @@ public:
 	Personagem();
 	~Personagem();
 };
-

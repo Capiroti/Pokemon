@@ -1,0 +1,16 @@
+##ID#NOME#TIPO#SEXO#FOTO#ALTURA#PESO#LEVEL#MAXHP#ATAQUE#DEFESA#SP.ATAQUE#SP.DEFESA#VELOCIDADE#DESCRICAO
+008
+Wartortle
+AGUA
+M
+sprites/wartortle
+1.0
+22.5
+11
+29
+3
+4
+3
+3
+3
+Quando atingido, este Pokémon vai puxar a sua cabeça, mas sua cauda ainda vai ficar um pouco pra fora.

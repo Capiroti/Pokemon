@@ -1,0 +1,16 @@
+#ID#NOME#TIPO#SEXO#FOTO#ALTURA#PESO#LEVEL#MAXHP#ATAQUE#DEFESA#SP.ATAQUE#SP.DEFESA#VELOCIDADE#DESCRICAO
+013
+Weedle
+INSETO
+M
+sprites/Weedle
+0.3
+3.2
+1
+13
+2
+2
+1
+1
+3
+Frequentemente encontrado em florestas e pastagens. Ele tem uma farpa afiada, tóxico de cerca de dois centímetros no topo de sua cabeça.

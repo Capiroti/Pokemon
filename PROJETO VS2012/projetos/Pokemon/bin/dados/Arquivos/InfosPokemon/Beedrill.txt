@@ -1,0 +1,16 @@
+#ID#NOME#TIPO#SEXO#FOTO#ALTURA#PESO#LEVEL#MAXHP#ATAQUE#DEFESA#SP.ATAQUE#SP.DEFESA#VELOCIDADE#DESCRICAO
+015
+Beedrill
+INSETO
+M
+sprites/Beedrill
+1.0
+29.5
+18
+41
+6
+2
+2
+3
+4
+Possui três ferrões venenosos em suas patas dianteiras e sua cauda. Eles são usados ??para espetar seu inimigo repetidamente.

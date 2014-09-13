@@ -21,6 +21,7 @@ public:
 
 	//GETTERS E SETTERS
 	string getNome();
+	Sprite* getSprite();
 	int getIdade();
 	char getSexo();
 	float getX();

@@ -1,0 +1,16 @@
+#ID#NOME#TIPO#SEXO#FOTO#ALTURA#PESO#LEVEL#MAXHP#ATAQUE#DEFESA#SP.ATAQUE#SP.DEFESA#VELOCIDADE#DESCRICAO
+018
+Pidgeot
+VOADOR
+M
+sprites/Pidgeot
+1.5
+39.5
+19
+52
+4
+3
+3
+3
+6
+Quando caçando, desce a superfície da água em alta velocidade para apanhar presas desavisadas como o Magikarp.
