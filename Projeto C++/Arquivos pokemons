@@ -1,0 +1,10 @@
+`Criar um arquivo com quais pokemons existem pra cada fase
+EX>
+Fase 1
+<pokemon>
+<pokemon>
+.
+.
+.
+
+Dessa forma só colocamos os pokemons que aparecem na fase
