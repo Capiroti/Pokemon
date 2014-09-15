@@ -1,0 +1,16 @@
+#ID#NOME#TIPO#SEXO#FOTO#ALTURA#PESO#LEVEL#MAXHP#ATAQUE#DEFESA#SP.ATAQUE#SP.DEFESA#VELOCIDADE#DESCRICAO
+029
+NidoranF
+Veneno
+F
+sprites/NidoranF
+0.4
+7.0
+5
+20
+3
+2
+2
+2
+2
+Apesar de pequena, suas farpas venenosas tornar este Pokémon perigoso. A fêmea tem chifres menores.

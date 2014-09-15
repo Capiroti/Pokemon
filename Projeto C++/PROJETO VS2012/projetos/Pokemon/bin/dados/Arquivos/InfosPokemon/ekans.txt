@@ -1,0 +1,16 @@
+#ID#NOME#TIPO#SEXO#FOTO#ALTURA#PESO#LEVEL#MAXHP#ATAQUE#DEFESA#SP.ATAQUE#SP.DEFESA#VELOCIDADE#DESCRICAO
+023
+Ekans
+Veneno
+N
+sprites/Ekans
+2.0
+6.9
+5
+20
+3
+2
+2
+2
+3
+Quanto mais velho ele fica, mais ela cresce. À noite, ele envolve seu corpo longo em torno de galhos de árvores para descansar.

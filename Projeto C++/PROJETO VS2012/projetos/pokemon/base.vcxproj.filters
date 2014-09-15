@@ -1,72 +1,62 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <ClCompile Include="Jogo.cpp">
+      <Filter>Cpp Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Cpp Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Personagem.cpp">
+      <Filter>Cpp Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Pessoa.cpp">
+      <Filter>Cpp Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Pokemon.cpp">
+      <Filter>Cpp Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PokemonAgua.cpp">
+      <Filter>Cpp Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PokemonFogo.cpp">
+      <Filter>Cpp Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PokemonPlanta.cpp">
+      <Filter>Cpp Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Tela.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Jogo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Personagem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Pessoa.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Pokemon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PokemonAgua.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PokemonFogo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PokemonPlanta.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Tela.h" />
+  </ItemGroup>
+  <ItemGroup>
     <Filter Include="Header Files">
-      <UniqueIdentifier>{18dc953b-e73e-437f-9e6c-c3095160ec19}</UniqueIdentifier>
+      <UniqueIdentifier>{814b8531-7b76-4eb3-b850-0082c0310ea8}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{833312db-71e3-4cc8-985d-4369127abde0}</UniqueIdentifier>
+    <Filter Include="Cpp Files">
+      <UniqueIdentifier>{9a683fb1-ee8a-4cb3-80ee-8837fe15b0cd}</UniqueIdentifier>
     </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="Classes\Jogo.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Classes\main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Classes\Personagem.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Classes\Pessoa.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Classes\pokedex.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Classes\Pokemon.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Classes\PokemonAgua.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Classes\PokemonFogo.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Classes\PokemonPlanta.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Classes\Tela.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Classes\Jogo.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Classes\Personagem.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Classes\Pessoa.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Classes\pokedex.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Classes\Pokemon.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Classes\PokemonAgua.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Classes\PokemonFogo.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Classes\PokemonPlanta.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Classes\Tela.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>

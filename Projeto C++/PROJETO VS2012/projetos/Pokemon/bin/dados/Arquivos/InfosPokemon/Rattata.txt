@@ -1,0 +1,16 @@
+#ID#NOME#TIPO#SEXO#FOTO#ALTURA#PESO#LEVEL#MAXHP#ATAQUE#DEFESA#SP.ATAQUE#SP.DEFESA#VELOCIDADE#DESCRICAO
+019
+Rattata
+NORMAL
+M
+sprites/Rattata
+0.3
+3.5
+1
+13
+4
+4
+2
+2
+6
+Viver onde quer que haja comida disponível, ele incessantemente escava para encontrar comida o dia inteiro.

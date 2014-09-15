@@ -10,29 +10,6 @@
       <Platform>Win32</Platform>
     </ProjectConfiguration>
   </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="Classes\Jogo.cpp" />
-    <ClCompile Include="Classes\main.cpp" />
-    <ClCompile Include="Classes\Personagem.cpp" />
-    <ClCompile Include="Classes\Pessoa.cpp" />
-    <ClCompile Include="Classes\pokedex.cpp" />
-    <ClCompile Include="Classes\Pokemon.cpp" />
-    <ClCompile Include="Classes\PokemonAgua.cpp" />
-    <ClCompile Include="Classes\PokemonFogo.cpp" />
-    <ClCompile Include="Classes\PokemonPlanta.cpp" />
-    <ClCompile Include="Classes\Tela.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Classes\Jogo.h" />
-    <ClInclude Include="Classes\Personagem.h" />
-    <ClInclude Include="Classes\Pessoa.h" />
-    <ClInclude Include="Classes\pokedex.h" />
-    <ClInclude Include="Classes\Pokemon.h" />
-    <ClInclude Include="Classes\PokemonAgua.h" />
-    <ClInclude Include="Classes\PokemonFogo.h" />
-    <ClInclude Include="Classes\PokemonPlanta.h" />
-    <ClInclude Include="Classes\Tela.h" />
-  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{67AC409B-9BDA-4D9D-86C1-D2B9885557CF}</ProjectGuid>
     <RootNamespace>galactica</RootNamespace>
@@ -115,6 +92,27 @@
       <TargetMachine>MachineX86</TargetMachine>
     </Link>
   </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Jogo.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Personagem.cpp" />
+    <ClCompile Include="Pessoa.cpp" />
+    <ClCompile Include="Pokemon.cpp" />
+    <ClCompile Include="PokemonAgua.cpp" />
+    <ClCompile Include="PokemonFogo.cpp" />
+    <ClCompile Include="PokemonPlanta.cpp" />
+    <ClCompile Include="Tela.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Jogo.h" />
+    <ClInclude Include="Personagem.h" />
+    <ClInclude Include="Pessoa.h" />
+    <ClInclude Include="Pokemon.h" />
+    <ClInclude Include="PokemonAgua.h" />
+    <ClInclude Include="PokemonFogo.h" />
+    <ClInclude Include="PokemonPlanta.h" />
+    <ClInclude Include="Tela.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

@@ -1,0 +1,17 @@
+#ID#NOME#TIPO#SEXO#FOTO#ALTURA#PESO#LEVEL#MAXHP#ATAQUE#DEFESA#SP.ATAQUE#SP.DEFESA#VELOCIDADE#DESCRICAO
+007
+Squirtle
+AGUA
+M
+sprites/squirtle
+0.5
+9.0
+1
+18
+3
+3
+2
+3
+2
+Abriga-se na sua concha, em seguida, contra-ataca com bicas de água em todas as oportunidades.
+

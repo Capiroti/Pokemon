@@ -1,0 +1,15 @@
+#ID#NOME#TIPO#SEXO#FOTO#ALTURA#PESO#LEVEL#MAXHP#ATAQUE#DEFESA#SP.ATAQUE#SP.DEFESA#VELOCIDADE#DESCRICAO
+017
+Pidgeotto
+M
+sprites/Pidgeotto
+1.1
+30.0
+11
+35
+3
+3
+2
+2
+4
+As garras em seus pés estão bem desenvolvidas. Pode transportar presas como um Exeggcute para seu ninho a mais de 60 quilômetros de distância.
