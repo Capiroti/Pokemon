@@ -11,7 +11,8 @@ protected:
 	string nome;
 	int idade;
 	char sexo;
-	float x, y, vel;
+	float x, y;
+	float vel;
 	Sprite sprite;
 	SpriteSheet animacao;
 

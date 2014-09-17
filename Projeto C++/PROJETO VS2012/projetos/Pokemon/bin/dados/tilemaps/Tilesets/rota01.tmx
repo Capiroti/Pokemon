@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="100" height="100" tilewidth="16" tileheight="16">
+ <tileset firstgid="1" name="TileSetRoutes" tilewidth="16" tileheight="16" spacing="1" margin="1">
+  <image source="TileSet.png" width="477" height="800"/>
+ </tileset>
+ <layer name="Camada de Tiles 1" width="100" height="100">
+  <data encoding="base64" compression="zlib">
+   eJzt22Fy0zAQhuFNgCnhENSdFA6RthPfhwMAx+AqXIsOZ0Am/pLN1rZkxQ38eJ9BI1M7DOPVZiXZ3azNPqS2yfTpj6369sby16vfpQ/cdR9CkU/pnv1O92ub+vv1eB/jkbte/+6OWMyicXyfjm/sZb/tj1/Eo/+571vX+/xAOY3jGAsd/0rnnlfn8XhM7e1EuzPyo1YuP3T+Yzp+N9EebLi+EI95NI6/puNvoX0vOL/tm4/XrZEftTSOu1xoU9vb4f7q7zr/3uY18qOOxnFrp7GuWGzd+bnxID/qaBx3edHaoVeOtEZ+XJvPD8VBsdgb+XFtGsdj9Zr8uC6N425+29ohN7q80FpQ623NfxubXnuw/riMxnFr52tt1XXfx3X6zobXIrdGftTSOFY9Vyx8Xfd7J3GdQf1Ylsax9kX0XXX8vuqbzsee+rGs4/5VV7Mn6rrOx74mPxpiNErjWHV7aG/X1/XYkx/Livu7sX77mq7zjZ3mUdSPZR3zw073vrHp+eyTnT8HUb1pjecfl/L5oXub21v38yt9rrXhfS/iMY9fn2v/PNb0v/V84Odjza/ricc8sX50893G8mtw1uevY+j5YOn3Fc8Hl+fX54pJPL4ZOOd/3h3H9x3IjzpxfZ7rx+a3MR7kR524Ps/1Y/Hg+fky4vo814/Fw8+9mF/V8/Or1s7fa/D1Qcdj8WiM+dUS/PMPxcLX7ljPqR+vS+O4scvWHNpDYX51mdL3D+MaY+zZIM8HLzP0/qH2R7Q39cXK90rie43EY564vzv1zkhj5zVbzw55/rEcP7/KxSPW7P3EZ8iPOiXvV2k/veRdhu66vZEftUreP2ztEJMf7rr9yLWaM5MfdTSOH1fT7alvuu8PmevJjzoax3P3E3PXkR91Sn9PdhP2E+f8fi3KdeP487q89/OnkuuJxzw/1//6fwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/4c/igKxVw==
+  </data>
+ </layer>
+ <objectgroup name="Camada de Objetos 1">
+  <object name="Player" type="Player" x="215" y="630"/>
+ </objectgroup>
+</map>

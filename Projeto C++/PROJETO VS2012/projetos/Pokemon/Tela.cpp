@@ -1,5 +1,10 @@
 #include "Tela.h"
 
+void Tela::desenha()
+{
+
+}
+
 TileMap Tela::getMapa()
 {
 	return mapa;

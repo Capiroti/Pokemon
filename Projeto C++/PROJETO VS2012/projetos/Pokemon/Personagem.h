@@ -14,14 +14,19 @@
 class Personagem : public Pessoa
 {
 private:
+	bool movendo;
+	float oldX, oldY, nextX, nextY, interpolador;
+	ObjetoTile* objeto;
 
 public:
-	void carregarAnimacao();
-	void atualiza();
-	void desenha();
-	void movimentacao();
-	//void desenha() const;
-	
+	void carregarAnimacao(ObjetoTile* obj);
+	void atualizar();
+	void movePara(float x, float y);
+
+	bool estaMovendo();
+
+	float getXcentral();
+	float getYcentral();
 
 	Personagem();
 	~Personagem();

@@ -26,6 +26,7 @@
       <Filter>Cpp Files</Filter>
     </ClCompile>
     <ClCompile Include="Tela.cpp" />
+    <ClCompile Include="TelaMenu.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Jogo.h">
@@ -50,6 +51,7 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Tela.h" />
+    <ClInclude Include="TelaMenu.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header Files">

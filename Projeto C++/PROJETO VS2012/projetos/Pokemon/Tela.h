@@ -4,13 +4,16 @@
 class Tela
 {
 protected:
+	Sprite fundo;
+	GerenciadorDeRecursos recurso;
 	TileMap mapa;
-	AStar astar;
 
 public:
 
 	void setMapa(TileMap pmapa);
 	TileMap getMapa();
+
+	virtual void desenha();
 
 	Tela();
 	~Tela();

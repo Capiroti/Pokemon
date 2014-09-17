@@ -102,6 +102,7 @@
     <ClCompile Include="PokemonFogo.cpp" />
     <ClCompile Include="PokemonPlanta.cpp" />
     <ClCompile Include="Tela.cpp" />
+    <ClCompile Include="TelaMenu.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Jogo.h" />
@@ -112,6 +113,7 @@
     <ClInclude Include="PokemonFogo.h" />
     <ClInclude Include="PokemonPlanta.h" />
     <ClInclude Include="Tela.h" />
+    <ClInclude Include="TelaMenu.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
