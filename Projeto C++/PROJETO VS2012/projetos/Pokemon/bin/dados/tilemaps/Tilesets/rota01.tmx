@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="24" height="39" tilewidth="16" tileheight="16">
+ <tileset firstgid="1" name="TileSetRoutes" tilewidth="16" tileheight="16" spacing="1" margin="1">
+  <image source="TileSet.png" width="477" height="800"/>
+ </tileset>
+ <layer name="Camada de Tiles 1" width="24" height="39">
+  <data encoding="base64" compression="zlib">
+   eJytVoFNAzEMdAvoKUNQqi9L0Fb5fRgAOgZzgpiBVMqJ6zWO81UlLKef/OWwz/avlmZP2VaBz3+2KHZn8Xn412y/+aUx++3S94ofnQcu7tnmdwa79GNZX+CX5+wn8spfsbH+zns/i3P8fbb7hm2snz/2n/P6oWE7Jz+45yM/+xQ7Wrw/FuP71xX+Q4lbKufxG/uPNs+U/0RcgD0Sj7n4yj8Rf/wPt+YP3JHuuhV/L3+34r+lmCf7ry3UI/T6Ym3te/oHNmpxpDu8On6zei2sK/yRX2BznrlXqM57448+gNgMdNfJsK++N/7DKYeNPGNffS9/5LHWOznP6rv5ExZjc46xDw1tZsSfcSMNHux8DiBf0Mfk8MfZqBezfgbCrPUtrl/0W83xsbxby33NuO41/qkjPtfUL8+t3vjMmV+J9KLrobLHz09rnf9e/Ube06Pie/UbeQ8/mr/R91JUr6wtTz+sYY0v1h4+a87r/8DmXGp+r40/33+NHaytnx7Ns8a92eXNL80Pz5h36+8N+t2n/bP1TaA5xGzr7f8RvuYwNd5R/i1c9N+e2T6Ve5V/C38qd3zRueSchcaV/37RtkMx4OyC88p/bn+Lzin/Hs/9rfe9P9HVo7M=
+  </data>
+ </layer>
+ <objectgroup name="Camada de Objetos 1" width="24" height="39">
+  <object name="Player" type="Player" x="213" y="615" width="16" height="16">
+   <properties>
+    <property name="nome" value="Player"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

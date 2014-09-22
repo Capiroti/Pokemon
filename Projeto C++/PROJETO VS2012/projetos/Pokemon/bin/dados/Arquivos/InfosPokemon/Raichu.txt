@@ -1,0 +1,16 @@
+#ID#NOME#TIPO#SEXO#FOTO#ALTURA#PESO#LEVEL#MAXHP#ATAQUE#DEFESA#SP.ATAQUE#SP.DEFESA#VELOCIDADE#DESCRICAO
+026
+Raichu
+Eletrico
+N
+sprites/Raichu
+0.8
+30.0
+5
+20
+6
+3
+4
+3
+7
+Quando sua eletricidade aumenta, seus músculos são estimulados, e torna-se mais agressivo do que o habitual.
