@@ -1,8 +1,8 @@
-﻿Build started 23/09/2014 18:48:32.
+﻿Build started 23/09/2014 19:53:41.
      1>Project "D:\GitHub\Pokemon\Projeto C++\PROJETO VS2012\projetos\Pokemon\base.vcxproj" on node 2 (Build target(s)).
      1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V110\Microsoft.CppBuild.targets(346,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
      1>ClCompile:
-         D:\VisualStudio\VC\bin\CL.exe /c /I../../libUnicornio/SDL2/include /I../../libUnicornio/include /I../../libUnicornio/include/Eventos /I../../libUnicornio/include/Interface /I../../libUnicornio/include/Midia /I../../libUnicornio/include/TileMap /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt /I../../libEGL/ Jogo.cpp
+         D:\VisualStudio\VC\bin\CL.exe /c /I../../libUnicornio/SDL2/include /I../../libUnicornio/include /I../../libUnicornio/include/Eventos /I../../libUnicornio/include/Interface /I../../libUnicornio/include/Midia /I../../libUnicornio/include/TileMap /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt /I../../libEGL/ Jogo.cpp Tela.cpp TelaCenario.cpp TelaMenu.cpp main.cpp
          Jogo.cpp
          RELEASE UNICORNIO: added libs: sdl2.lib sdl2main.lib sdl2_image.lib sdl2_ttf.lib sdl2_mixer.lib
      1>D:\GitHub\Pokemon\Projeto C++\PROJETO VS2012\libUnicornio\include\Eventos\Eventos.h(58): warning C4305: 'initializing' : truncation from 'double' to 'float'
@@ -14,6 +14,18 @@
      1>Jogo.cpp(100): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
      1>Jogo.cpp(105): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
      1>Jogo.cpp(107): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+         Tela.cpp
+         RELEASE UNICORNIO: added libs: sdl2.lib sdl2main.lib sdl2_image.lib sdl2_ttf.lib sdl2_mixer.lib
+     1>D:\GitHub\Pokemon\Projeto C++\PROJETO VS2012\libUnicornio\include\Eventos\Eventos.h(58): warning C4305: 'initializing' : truncation from 'double' to 'float'
+         TelaCenario.cpp
+         RELEASE UNICORNIO: added libs: sdl2.lib sdl2main.lib sdl2_image.lib sdl2_ttf.lib sdl2_mixer.lib
+     1>D:\GitHub\Pokemon\Projeto C++\PROJETO VS2012\libUnicornio\include\Eventos\Eventos.h(58): warning C4305: 'initializing' : truncation from 'double' to 'float'
+         TelaMenu.cpp
+         RELEASE UNICORNIO: added libs: sdl2.lib sdl2main.lib sdl2_image.lib sdl2_ttf.lib sdl2_mixer.lib
+     1>D:\GitHub\Pokemon\Projeto C++\PROJETO VS2012\libUnicornio\include\Eventos\Eventos.h(58): warning C4305: 'initializing' : truncation from 'double' to 'float'
+         main.cpp
+         RELEASE UNICORNIO: added libs: sdl2.lib sdl2main.lib sdl2_image.lib sdl2_ttf.lib sdl2_mixer.lib
+     1>D:\GitHub\Pokemon\Projeto C++\PROJETO VS2012\libUnicornio\include\Eventos\Eventos.h(58): warning C4305: 'initializing' : truncation from 'double' to 'float'
        Link:
          D:\VisualStudio\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"bin\base.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:".\bin\base.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\bin\base.lib" /MACHINE:X86 /SAFESEH Release\Jogo.obj
          Release\main.obj
@@ -53,4 +65,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:03.38
+Time Elapsed 00:00:05.34
