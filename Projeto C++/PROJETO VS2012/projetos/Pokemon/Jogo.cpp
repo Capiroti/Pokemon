@@ -3,14 +3,14 @@
 
 void Jogo::controladorTelas()
 {
-	switch (indiceTela)
+	switch (tela)
 	{
 	case MENU:
-		if(telaMenu -> desenhaInterface())
+		if(((TelaMenu*)te) -> desenhaInterface())
 		{
 			//Pergunta pro usuario o sexo e carrega a animacao passando o sexo
 			player.setSexo(GAROTA);
-			indiceTela = CASAANDAR2; // depois do menu começa o jogo;
+			tela = CASAANDAR2; // depois do menu começa o jogo;
 			entrouCenario = true;
 		}
 		break;
@@ -18,57 +18,60 @@ void Jogo::controladorTelas()
 	case CASAANDAR2:
 		if(entrouCenario)
 		{
-			carregarCenario("dados/tilemaps/casaPersonagem.json","TileSetCasa" ,"dados/tilemaps/Tilesets/configCasa.txt",0,0);
+			mapa->carregar("dados/tilemaps/casaPersonagem.json");
+			//mapa->carregarConfigTileSet("TileSetCasa" ,"dados/tilemaps/Tilesets/configCasa.txt");
+			player.carregarAnimacao(mapa->getObjeto("Player"));
+			mapa->setPosCentro(player.getXcentral(), player.getYcentral());
 			entrouCenario = false;
 		}
 		if(teclado.pressionou[TECLA_S])
 		{
-			indiceTela = ROTA01;
+			tela = ROTA01;
+			mapa->descarregar();
 			entrouCenario = true;
 		}
+		player.atualizar();
+		testPlayerMapa();
 		break;
 
 	case ROTA01:
 		if(entrouCenario)
 		{
-			carregarCenario("dados/tilemaps/Rota01.json","TileSetRotas" ,"dados/tilemaps/Tilesets/configRota01.txt",0,10);		
+			mapa->carregar("dados/tilemaps/Rota01.json");
+			mapa->carregarConfigTileSet("TileSetRotas" ,"dados/tilemaps/Tilesets/configRota01.txt");
+			player.atualizarAnimacao(mapa->getObjeto("Player"));
+			mapa->setPosCentro(player.getXcentral(), player.getYcentral()+10);
+			
 			entrouCenario = false;
-		}		
+		}
 		if(teclado.pressionou[TECLA_D])
 		{
-			indiceTela = VERIDIAN;
+			tela = VERIDIAN;
+			mapa->descarregar();
 			entrouCenario = true;
 		}
+		player.atualizar();
+		testPlayerMapa();
 		break;
 	case VERIDIAN:
 		if(entrouCenario)
 		{
-			carregarCenario("dados/tilemaps/viridian.json","TileSetRotas" ,"dados/tilemaps/Tilesets/configRota01.txt",0,10);		
+			mapa->carregar("dados/tilemaps/viridian.json");
+			//mapa->carregarConfigTileSet("TileSetCasa" ,"dados/tilemaps/Tilesets/configCasa.txt");
+			player.atualizarAnimacao(mapa->getObjeto("Player"));
+			mapa->setPosCentro(player.getXcentral(), player.getYcentral()+10);
 			entrouCenario = false;
 		}
-		break;
-	}
-	if(!entrouCenario)
-	{
 		player.atualizar();
 		testPlayerMapa();
+		break;
 	}
-}
-
-void Jogo::carregarCenario(string json,string nomeTileSet, string caminhoTileSet, int addXCentral, int addYCentral)
-{
-	telaCenario->setJson(json);
-	telaCenario->setNomeTileSet(nomeTileSet);
-	telaCenario->setCaminhoTileSet(caminhoTileSet);
-
-	telaCenario->carregaMapa();
-	telaCenario->desenhaInterface(player,"Player", addXCentral, addYCentral);
 }
 
 Jogo::Jogo()
 {
 	mapa = new TileMap();
-	indiceTela = MENU;
+	tela = MENU;
 }
 
 Jogo::~Jogo()
@@ -109,11 +112,10 @@ void Jogo::testPlayerMapa()
 			}
 		}	
 	
-	switch (indiceTela)
+	switch (tela)
 	{
 	case CASAANDAR2:
-		telaCenario->getMapa().setPosCentro(player.getXcentral(), player.getYcentral());
-		//mapa->setPosCentro(player.getXcentral(), player.getYcentral());
+		mapa->setPosCentro(player.getXcentral(), player.getYcentral());
 		break;
 	case ROTA01:
 		mapa->setPosCentro(player.getXcentral(), player.getYcentral()+10);
@@ -132,14 +134,12 @@ void Jogo::testPlayerMapa()
 void Jogo::inicializar()
 {
 	uniInicializar(600, 400, false);
-	telaMenu = new TelaMenu();
-	telaCenario = new TelaCenario();
+	te = new TelaMenu();
+
 }
 
 void Jogo::finalizar()
 {
-	telaMenu->~TelaMenu();
-	telaCenario->~TelaCenario();
 	uniFinalizar();
 }
 

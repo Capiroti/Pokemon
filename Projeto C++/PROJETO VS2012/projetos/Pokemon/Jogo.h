@@ -24,10 +24,9 @@
 class Jogo
 {
 protected:
-	int indiceTela;
+	int tela;
 	Personagem player;
-	TelaMenu *telaMenu;
-	TelaCenario *telaCenario;
+	Tela *te;
 
 	TileMap *mapa;
 	Sprite fundo;
@@ -40,7 +39,6 @@ public:
 	~Jogo();
 
 	void controladorTelas();
-	void carregarCenario(string json,string nomeTileSet, string caminhoTileSet, int addPosXcentral, int addPosYcentral);
 	void testPlayerMapa();
 	void inicializar();
 	void executar();
