@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Jogo.cpp">
+      <Filter>Cpp Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Cpp Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Personagem.cpp">
+      <Filter>Cpp Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Pessoa.cpp">
+      <Filter>Cpp Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Pokemon.cpp">
+      <Filter>Cpp Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PokemonAgua.cpp">
+      <Filter>Cpp Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PokemonFogo.cpp">
+      <Filter>Cpp Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PokemonPlanta.cpp">
+      <Filter>Cpp Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Tela.cpp">
+      <Filter>Cpp Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TelaCenario.cpp">
+      <Filter>Cpp Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TelaMenu.cpp">
+      <Filter>Cpp Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Jogo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Personagem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Pessoa.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Pokemon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PokemonAgua.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PokemonFogo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PokemonPlanta.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Tela.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TelaCenario.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TelaMenu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{814b8531-7b76-4eb3-b850-0082c0310ea8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Cpp Files">
+      <UniqueIdentifier>{9a683fb1-ee8a-4cb3-80ee-8837fe15b0cd}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
