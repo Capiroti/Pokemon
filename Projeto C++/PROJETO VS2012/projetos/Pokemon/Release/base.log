@@ -1,4 +1,4 @@
-﻿Build started 23/09/2014 18:48:32.
+﻿Build started 23/09/2014 19:39:19.
      1>Project "D:\GitHub\Pokemon\Projeto C++\PROJETO VS2012\projetos\Pokemon\base.vcxproj" on node 2 (Build target(s)).
      1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V110\Microsoft.CppBuild.targets(346,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
      1>ClCompile:
@@ -53,4 +53,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:03.38
+Time Elapsed 00:00:03.00
