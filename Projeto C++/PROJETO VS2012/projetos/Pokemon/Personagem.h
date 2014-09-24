@@ -14,11 +14,17 @@
 class Personagem : public Pessoa
 {
 private:
-	bool movendo;
+	bool movendo, spritesCarregados;
 	float oldX, oldY, nextX, nextY, interpolador;
 	ObjetoTile* objeto;
 
 public:
+
+	bool getSpritesCarregados();
+
+	void setSpritesCarregados(bool spritesCarregados);
+
+
 	void carregarAnimacao(ObjetoTile* obj);
 	void atualizarAnimacao(ObjetoTile* obj);
 	void atualizar();

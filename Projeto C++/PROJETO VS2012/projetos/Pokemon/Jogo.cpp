@@ -57,7 +57,7 @@ void Jogo::controladorTelas()
 
 void Jogo::carregarCenario(string json,string nomeTileSet, string caminhoTileSet, int addXCentral, int addYCentral)
 {
-	
+	mapa.descarregar();
 	telaCenario->setJson(json);
 	telaCenario->setNomeTileSet(nomeTileSet);
 	telaCenario->setCaminhoTileSet(caminhoTileSet);

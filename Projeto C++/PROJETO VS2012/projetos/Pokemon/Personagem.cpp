@@ -46,20 +46,19 @@ void Personagem::atualizar()
 
 void Personagem::carregarAnimacao(ObjetoTile* obj)
 {
-	if(sexo == GAROTO)
+	if(!this->spritesCarregados)
 	{
-		animacao.carregar("dados/player.png", 4, 3);
-		sprite.setSpriteSheet(&animacao);
-		sprite.setVelocidadeAnimacao(3.0f);
-	}
+		if(this->sexo == GAROTO)
+			animacao.carregar("dados/player.png", 4, 3);
+		else if(this->sexo == GAROTA)
+			animacao.carregar("dados/playar.png", 4, 3);
+			
+		this->sprite.setSpriteSheet(&animacao);
+		this->sprite.setVelocidadeAnimacao(3.0f);
+		this->sprite.setEscala(2,2);
 
-	if(sexo == GAROTA)
-	{
-		animacao.carregar("dados/playar.png", 4, 3);
-		sprite.setSpriteSheet(&animacao);
-		sprite.setVelocidadeAnimacao(3.0f);
+		this->spritesCarregados = true;
 	}
-
 	//setando o objeto que criei no tiled pro objeto que ganha o sprite
 	this->objeto = obj;
 	obj->setSprite(&sprite);
@@ -102,6 +101,10 @@ float Personagem::getXcentral(){return objeto->getXCentro();}
 float Personagem::getYcentral(){return objeto->getYCentro();}
 
 bool Personagem::estaMovendo(){return movendo;}
+
+bool Personagem::getSpritesCarregados(){ return this->spritesCarregados;}
+
+void Personagem::setSpritesCarregados(bool spritesCarregados){ this->spritesCarregados = spritesCarregados;}
 
 Personagem::Personagem()
 {

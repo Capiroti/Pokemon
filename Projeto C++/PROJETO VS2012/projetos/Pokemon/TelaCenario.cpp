@@ -25,7 +25,7 @@ void TelaCenario::setEntrada(int entrada){this->entradas.push_back(entrada);}
 void TelaCenario::carregaMapa(TileMap &mapa)
 {
 	mapa.carregar(this->json);
-	mapa.carregarConfigTileSet(this->nomeTileSet, this->caminhoTileSet);
+	//mapa.carregarConfigTileSet(this->nomeTileSet, this->caminhoTileSet);
 }
 
 void TelaCenario::carregaMapa(string json, string nomeTileSet, string caminhoTileSet, TileMap &mapa)
