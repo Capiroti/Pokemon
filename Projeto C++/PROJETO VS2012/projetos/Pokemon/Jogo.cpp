@@ -57,17 +57,17 @@ void Jogo::controladorTelas()
 
 void Jogo::carregarCenario(string json,string nomeTileSet, string caminhoTileSet, int addXCentral, int addYCentral)
 {
+	
 	telaCenario->setJson(json);
 	telaCenario->setNomeTileSet(nomeTileSet);
 	telaCenario->setCaminhoTileSet(caminhoTileSet);
 
-	telaCenario->carregaMapa();
-	telaCenario->desenhaInterface(player,"Player", addXCentral, addYCentral);
+	telaCenario->carregaMapa(mapa);
+	telaCenario->desenhaInterface(player,"Player", addXCentral, addYCentral,mapa);
 }
 
 Jogo::Jogo()
 {
-	mapa = new TileMap();
 	indiceTela = MENU;
 }
 
@@ -81,28 +81,28 @@ void Jogo::testPlayerMapa()
 		{
 			if(teclado.segurando[TECLA_DIR])
 			{
-				if(mapa->tileECaminhavel(player.getXcentral() + 1.0, player.getYcentral()))
+				if(mapa.tileECaminhavel(player.getXcentral() + 1.0, player.getYcentral()))
 				{
 					player.movePara(player.getXcentral() + 1.0, player.getYcentral());
 				}
 			}
 			else if(teclado.segurando[TECLA_ESQ])
 			{
-				if(mapa->tileECaminhavel(player.getXcentral() - 1.0, player.getYcentral()))
+				if(mapa.tileECaminhavel(player.getXcentral() - 1.0, player.getYcentral()))
 				{
 					player.movePara(player.getXcentral() - 1.0, player.getYcentral());
 				}
 			}
 			else if(teclado.segurando[TECLA_CIMA])
 			{
-				if(mapa->tileECaminhavel(player.getXcentral(), player.getYcentral() - 1.0))
+				if(mapa.tileECaminhavel(player.getXcentral(), player.getYcentral() - 1.0))
 				{
 					player.movePara(player.getXcentral(), player.getYcentral() - 1.0);
 				}
 			}
 			else if(teclado.segurando[TECLA_BAIXO])
 			{
-				if(mapa->tileECaminhavel(player.getXcentral(), player.getYcentral() + 1.0))
+				if(mapa.tileECaminhavel(player.getXcentral(), player.getYcentral() + 1.0))
 				{
 					player.movePara(player.getXcentral(), player.getYcentral() + 1.0);
 				}
@@ -112,20 +112,19 @@ void Jogo::testPlayerMapa()
 	switch (indiceTela)
 	{
 	case CASAANDAR2:
-		telaCenario->getMapa().setPosCentro(player.getXcentral(), player.getYcentral());
-		//mapa->setPosCentro(player.getXcentral(), player.getYcentral());
+		mapa.setPosCentro(player.getXcentral(), player.getYcentral());
 		break;
 	case ROTA01:
-		mapa->setPosCentro(player.getXcentral(), player.getYcentral()+10);
+		mapa.setPosCentro(player.getXcentral(), player.getYcentral()+10);
 		break;
 	case VERIDIAN:
-		mapa->setPosCentro(player.getXcentral()+10, player.getYcentral()+10);
+		mapa.setPosCentro(player.getXcentral()+10, player.getYcentral()+10);
 		break;
 	default:
 		break;
 	}
 		//	7)	desenhar o tilemap (player eh desenhado junto)
-		mapa->desenhar();
+		mapa.desenhar();
 
 }
 

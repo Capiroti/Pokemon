@@ -29,7 +29,9 @@ protected:
 	TelaMenu *telaMenu;
 	TelaCenario *telaCenario;
 
-	TileMap *mapa;
+	
+	TileMap mapa;
+	
 	Sprite fundo;
 	GerenciadorDeRecursos recursos;
 	

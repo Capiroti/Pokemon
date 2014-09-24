@@ -9,14 +9,12 @@ TelaCenario::~TelaCenario()
 {
 }
 
-TileMap TelaCenario::getMapa(){return this->mapa;}
 string TelaCenario::getJson(){return this->json;}
 string TelaCenario::getNomeTileSet(){return this->nomeTileSet;}
 string TelaCenario::getCaminhoTileSet(){return this->caminhoTileSet;}
 vector<int> TelaCenario::getPortas(){return this->portas;}
 vector<int> TelaCenario::getEntradas(){return this->entradas;}
 
-void TelaCenario::setMapa(TileMap mapa){this->mapa = mapa;}
 void TelaCenario::setJson(string json){this->json = json;}
 void TelaCenario::setNomeTileSet(string nomeTileSet){this->nomeTileSet = nomeTileSet;}
 void TelaCenario::setCaminhoTileSet(string caminhoTileSet){this->caminhoTileSet = caminhoTileSet;}
@@ -24,25 +22,24 @@ void TelaCenario::setPorta(int porta){this->portas.push_back(porta);}
 void TelaCenario::setEntrada(int entrada){this->entradas.push_back(entrada);}
 
 
-void TelaCenario::carregaMapa()
+void TelaCenario::carregaMapa(TileMap &mapa)
 {
-	this->mapa.carregar(this->json);
-	this->mapa.carregarConfigTileSet(this->nomeTileSet, this->caminhoTileSet);
+	mapa.carregar(this->json);
+	mapa.carregarConfigTileSet(this->nomeTileSet, this->caminhoTileSet);
 }
 
-void TelaCenario::carregaMapa(string json, string nomeTileSet, string caminhoTileSet)
+void TelaCenario::carregaMapa(string json, string nomeTileSet, string caminhoTileSet, TileMap &mapa)
 {
-	this->mapa.carregar(json);
-	this->mapa.carregarConfigTileSet(nomeTileSet, caminhoTileSet);
+	mapa.carregar(json);
+	//mapa.carregarConfigTileSet(nomeTileSet, caminhoTileSet);
 
 	this->json = json;
 	this->nomeTileSet = nomeTileSet;
 	this->caminhoTileSet = caminhoTileSet;
 }
 
-int TelaCenario::desenhaInterface(Personagem player, string nomeObjeto, int addXCentral, int addYCentral)
+void TelaCenario::desenhaInterface(Personagem &player, string nomeObjeto, int addXCentral, int addYCentral, TileMap &mapa)
 {
-	player.carregarAnimacao(this->mapa.getObjeto(nomeObjeto));
-	this->mapa.setPosCentro((player.getXcentral() + addXCentral), (player.getYcentral() + addYCentral));
-	return 0;
+	player.carregarAnimacao(mapa.getObjeto(nomeObjeto));
+	mapa.setPosCentro((player.getXcentral() + addXCentral), (player.getYcentral() + addYCentral));
 }
