@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="44" height="40" tilewidth="16" tileheight="16">
+ <tileset firstgid="1" name="TileSetCenario" tilewidth="16" tileheight="16">
+  <image source="../TileSets/TileSetCenario.png" trans="ffffff" width="256" height="240"/>
+ </tileset>
+ <tileset firstgid="241" name="TileSetPredios" tilewidth="16" tileheight="16">
+  <image source="../TileSets/TileSetPredios.png" trans="ffffff" width="262" height="376"/>
+ </tileset>
+ <layer name="Camada Inferior Tiles" width="44" height="40">
+  <data encoding="base64" compression="zlib">
+   eJztl8kNwjAQRX2iBtoARAPsV0pga4ClAZqhBLiyiTtLAyx94EiJZI2csccehwgZ6QlBRuOnn2DGQghRKTnw5drnINlLjkjNXXIi8Pixb1Zji64Xt+8byeuT1jwlZ4QXo+9GAzU77B6Y7pVPvruUrbKGKbuE24994RodTW2X0LfIfI/pZ1jbKJEvXKPu6XsV+c9NqHxrgMS3T2RQUL4tSRPQJvStgvfQ+VJ6UFxD5ZtXf3HA11ftlbhuNPn67mcYPvmq2O5n2cyjm2UqFjVUX9NsYNrPKHMRx/5rMxvA/cHWJYSvaabC5jP1PtjMcUXMk5wU4Ws722J1nPOvyzOH1en+H0LNOxy+Oucy+8Z8ab5xPwvjm50JOOE+X/SE/hyQfe8L9/lCZWi4Dn9TcB43XXf1XUqmgVkh61N9x5JRYCaMvnPJDEFdd22ozWPB6EvJH8vJlegbfaNv9P1H3y/ktXSk
+  </data>
+ </layer>
+ <layer name="Camada Superior Tiles" width="44" height="40">
+  <data encoding="base64" compression="zlib">
+   eJzt2DdTAkEYxvEDFWNjBENjwtgYENMHMBZ2xsLOWNgZCzsDfgLtHUOvX8dsa46F/0Jm1nXlGO5YmPHemd8sc3NzPDwDy0HIMIxthCKsBzjUuEbKs4ddk1X3RMoTqdfwqnuSod8zl2Gc4wKXuMI1bnDr+nmu1X43sSWs+zHkvSPTPR7wiCc84wWvUl6r/crrqSJPD8/Ziz70YwCDQg6X2zDcSEEq0uBBOjLcP69ltd8jHAurnHeIXMMYwSjGMI4JIW8umfKQjwIUoghe+KS88e53klxTmMYMZjGHeSFvOZkqUIkqVMOPGtTa3K+8ynkXyLWIJSxjBatYE/I2kalZyBXgcRuCUlYd/a6TawOb2MI2QtiRPkfRTrz7Vc3Jt1hGx/5g51jtV/5+V+U12x/Cc48HPOIJz4prWe13X6Ias/0hPG6OpSAVafAoztFx/2C2P4Qnj2P5KEAhihTn6Lh/iHZ/qOBYJapQDX+C+pXnr/2hmXwtaEUAbQnq185x7n9/zwte8YZ3fOAzxrw6+k3nfZiBTGQhGzkxfh/r6NdLNh+KUYJSlCXo/iGaqSFbLepQjwY0JnG/QbK1owOd6EJ3Evdr5zj7b3zH6Te+89/6XdKc12q/uvPa/f+ZvMqvx+x8s9Xu38eq/sXMVq9n9/8Pqve3mNfq9Zx+nX6dfpOj3y+OdVaE
+  </data>
+ </layer>
+ <objectgroup name="Camada de Objetos 1">
+  <object name="Player" type="Player" x="295" y="401"/>
+  <object name="NPC1" type="NPC1" x="332" y="397"/>
+  <object name="NPC2" type="NPC2" x="362" y="402"/>
+  <object name="NPC3" type="NPC3" x="394" y="403"/>
+  <object name="NPC4" type="NPC4" x="430" y="399"/>
+ </objectgroup>
+</map>

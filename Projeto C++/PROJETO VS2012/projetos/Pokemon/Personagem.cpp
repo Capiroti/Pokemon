@@ -55,7 +55,6 @@ void Personagem::carregarAnimacao(ObjetoTile* obj)
 			
 		this->sprite.setSpriteSheet(&animacao);
 		this->sprite.setVelocidadeAnimacao(3.0f);
-		this->sprite.setEscala(2,2);
 
 		this->spritesCarregados = true;
 	}

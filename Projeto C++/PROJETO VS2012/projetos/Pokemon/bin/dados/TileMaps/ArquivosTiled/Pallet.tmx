@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="39" height="30" tilewidth="16" tileheight="16">
+ <tileset firstgid="1" name="TileSet" tilewidth="16" tileheight="16">
+  <image source="../TileSets/TileSet.png" trans="ffffff" width="256" height="240"/>
+ </tileset>
+ <tileset firstgid="241" name="TileSetPredios" tilewidth="16" tileheight="16">
+  <image source="../TileSets/TileSetPredios.png" trans="ffffff" width="262" height="376"/>
+ </tileset>
+ <layer name="Camada Inferior Tiles" width="39" height="30">
+  <data encoding="base64" compression="zlib">
+   eJztlzsOwjAMhnMKykm4AzAxAifhDLDwmujEY6IT0DP0WjiilqwobRzpD0WikT6lgxW7XxO3zY0xJyIHzFfiBliHx4ZYg+YdsQeswwPhi2eurffWe+u9fd/bIMCqhmsLxSO9hXIx2tqQ3my/PygoiVcgRvPeiPFmfWxBaPZjjDdb24M4tvBUxmjOcaw3u2ZmPvslE9fuXtPEoL3JPd6WVxOTwhuqtn/yJnuDr1do+keZyBuyh3TR37Q9JIU3m7vyMBJ5NT0khTe77tDhF84psrZU3mZOPpm3y3Paltvm7ep9qu0Pmu87pLezx8GYmNRMhVffGeZrfqYIb3eiaHAwJxY1S0/tTVzEuqn+F9zatN/tMf8LhbiPphldWygfjzdlVC4z
+  </data>
+ </layer>
+ <layer name="Camada Superior Tiles" width="39" height="30">
+  <data encoding="base64" compression="zlib">
+   eJzt1clOwkAcx/GZKstVVDiDC76L2wOw+AAsngkIZ/cH0ItH1JcSEM+4Xv0ebMKhTadM6wxJf8knE5J/+v91kgYhljt7/8zmjrb2WvTewr7H/O8kaukEiPv5unRyh/sQZ/eP6rxOnvCMIR4VTrdb0Jz7XJ247/cQsSjvTXWne29Bc1Hcm1/2pRAHOMQRjuViM3Gkwp4qaqjjxGOvykwcabCniRbaOPXYqzITddbQZU8PZ+hjIMPPxJEiLtlzhWvc4FaGnzEZv2/UZF64nxHGmOAVU7xZcG8zOrzjA5/4wjd+LOgmHSEcrGAVKaSRcUw34xulQw7r2MAm8ihY0K1IhxK2sI0d7KJsuFvQ/6jp2NwtSRLdnONi7sx6zGQ95vxO1fwCwk6RiQ==
+  </data>
+ </layer>
+ <objectgroup name="Camada de Objetos 1">
+  <object name="Player" type="Player" x="220" y="295"/>
+  <object name="NPC1" type="NPC1" x="250" y="295"/>
+  <object name="NPC2" type="NPC2" x="278" y="295"/>
+  <object name="NPC3" type="NPC3" x="306" y="298"/>
+  <object name="NPC4" type="NPC4" x="304" y="328"/>
+  <object name="NPC5" type="NPC5" x="299" y="360"/>
+ </objectgroup>
+</map>

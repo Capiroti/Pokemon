@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="40" height="46" tilewidth="16" tileheight="16">
+ <tileset firstgid="1" name="TileSetCenario" tilewidth="16" tileheight="16">
+  <image source="../TileSets/TileSetCenario.png" trans="ffffff" width="256" height="240"/>
+ </tileset>
+ <layer name="Camada Inferior Tiles" width="40" height="46">
+  <data encoding="base64" compression="zlib">
+   eJzlWNtNxDAQzJfpIJcKUgrQBhw0AFwDPFqhBER5JCIrzY1m1jbkA4lIo7vkkvV4d3bs3DDsc4wLDtvnvFPMPY//yq9sccuGcYM6PwiMAOTHKPCp4nC8OC/mOp9nvJgLXuf7OCaPX4bzOSAPlb8iYjAnNeYM5/F92u6dxHjMjeta4J4xAXLKaoX8MReq9siD4yg+eE3pSOnVzaHGi+eitJL9HlwuF1wRrkVN8bksrstfEbFUv6pnJvodzy86oXoEeSntsaZQE6HpuC+4RbxefqwT7n3WGveq0ldwjNpNELuXn/Kd2vgKwYfzNdGcf5I/13PYt5w31d9rDNcfEaOX35yM6bxa6QHBOVM+veJpwV2Ck8mD8hLOK+ZccWNeypNvF9wseF5wL/AonuF4rn9U7rA/XJy4tt73ADyy+vL8uJbOL7FvWn0UtYN8W/zPaZ49UXHi/nF94jTbym8W313MbG6ZRlVP1urLteE64bmqH/d4S9zo31ND/jhvzn8dN8Wr5h9vw3f/HunZWG+m4ZwP6ivGdGstc1NaDP8IZD4Sz+HeFNc01cO8P2F+rLHoi9hPMb8jjKX6R/WT0zrmjfOncoVzCjC/10q91fqh3m3Umua8JKD2g+G/PXihfCMHtbdTXsOckBfPJeI5X+I+x5wfh/O6KK0pTfK+gf3aeQ96lfMTxU/VmL3OvV8qj3P1x3tb+TkfVX7n1jXl2+59Kn7v5VfbC6i9ktPpRJ8KPfXlMVVOlK7UfJAb+yPOpyd/SnOKn8sr5ra2ptUQax7mL+uLbE+g+LZ4HnqcW/Ni3cu8hDm5HHLtlC6x77mGHL+m7xrQy9kPI272TuZ6tGX/5/Sl8qHWxZb/Mfbg5/YtrmYtvNb7175Gjbp3o4niKn9xHDJk/PB/D8xPNpdSGV/VLttbHyC+yjWvH+/m3ux5pSn2lha4cT6B30dlHrV4v+Hn4tf49fTiHrwYzK82Hzx3vPY+gt9fPf4bvy+fcb9I
+  </data>
+ </layer>
+ <layer name="Camada Superior Tiles" width="40" height="46">
+  <data encoding="base64" compression="zlib">
+   eJztmckNwjAQRd0FndAPWwMgDpxBYAgNsDTA0gcl0A4j4ZGiEY6374BwvvQ1Bzv25GmssZJKKbUnV4lxSB4YjwDrcTyRz4Ao80Oti3rPXPwO5CMgyvxCn0/ldyFfG6LMzzUfXX8uyfxc8t33Rr57RJu25J3Ib0UeN3gesG8qPx6fkicNXqq4853Kj8fX5I2wJvfMvHr+sy/wC1Xb/ELV8Xur45fGj/tBqNriF6u2+MUKzY/7mE08LqNNaH6+58S3LtD8XOfAdo8KfZ9/rT+0SuYn71I6Ir+S+SFUGj9bf/DtF1K5+geqDnL1D1e0qX7mdQZ+aHXnN02l8ZP1XVdfff5+YLMO2Pdf+KHV8UsTmt/D0wtj1zw0P9/7wdPYNQ/Nzzdyfqj1KoX5T8GR80Oth+bH+lV+rFL4vQCV6RGP
+  </data>
+ </layer>
+ <objectgroup name="Camada de Objetos 1">
+  <object name="Player" type="Player" x="321" y="591"/>
+  <object name="NPC1" type="NPC1" x="353" y="597"/>
+  <object name="NPC2" type="NPC2" x="355" y="569"/>
+ </objectgroup>
+</map>
