@@ -225,11 +225,6 @@ void Sprite::obterCor(int &vermelho, int &verde, int &azul, int &alpha)
 
 bool Sprite::terminouAnimacao()
 {
-	if(!sheet)
-	{
-		return false;
-	}
-
 	return terminou_anim;
 }
 
@@ -346,6 +341,11 @@ void Sprite::setCorAlpha(int alpha)
 void Sprite::setAnimacaoAoContrario(bool b)
 {
 	animacao_ao_contrario = b;
+}
+
+void Sprite::setSpriteSheet(string nome)
+{
+	setSpriteSheet(recursos.getSpriteSheet(nome));
 }
 
 void Sprite::setSpriteSheet(SpriteSheet* sheet)

@@ -10,7 +10,7 @@ void Jogo::controladorTelas()
 		{
 			//Pergunta pro usuario o sexo e carrega a animacao passando o sexo
 			player.setSexo(GAROTA);
-			indiceTela = ROTA01; // depois do menu começa o jogo;
+			indiceTela = CASAANDAR2; // depois do menu começa o jogo;
 			entrouCenario = true;
 		}
 		break;
@@ -18,7 +18,7 @@ void Jogo::controladorTelas()
 	case CASAANDAR2:
 		if(entrouCenario)
 		{
-			carregarCenario("dados/TileMaps/Pallet.json","TileSetCenario" ,"dados/TileMaps/TileSets/ConfigTileSetCenario.txt",0,0);
+			carregarCenario("dados/tilemaps/Jsons/Pallet.json","TileSetCenario" ,"dados/tilemaps/TileSets/ConfigTileSetCenario.txt",0,0);
 			entrouCenario = false;
 		}
 		if(teclado.pressionou[TECLA_S])
@@ -31,7 +31,7 @@ void Jogo::controladorTelas()
 	case ROTA01:
 		if(entrouCenario)
 		{
-			carregarCenario("dados/TileMaps/Rota01.json","TileSetCenario" ,"dados/TileMaps/TileSets/ConfigTileSetCenario.txt",0,0);
+			carregarCenario("dados/tilemaps/Jsons/Rota01.json","TileSetCenario" ,"dados/tilemaps/TileSets/ConfigTileSetCenario.txt",0,0);
 			entrouCenario = false;
 		}		
 		if(teclado.pressionou[TECLA_D])
@@ -43,7 +43,7 @@ void Jogo::controladorTelas()
 	case VERIDIAN:
 		if(entrouCenario)
 		{
-			carregarCenario("dados/TileMaps/Viridian.json","TileSetCenario" ,"dados/TileMaps/TileSets/ConfigTileSetCenario.txt",0,0);
+			carregarCenario("dados/tilemaps/Jsons/Viridian.json","TileSetCenario" ,"dados/tilemaps/TileSets/ConfigTileSetCenario.txt",0,0);
 			entrouCenario = false;
 		}
 		break;
@@ -69,6 +69,7 @@ void Jogo::carregarCenario(string json,string nomeTileSet, string caminhoTileSet
 Jogo::Jogo()
 {
 	indiceTela = MENU;
+	player.setSpritesCarregados(false);
 }
 
 Jogo::~Jogo()

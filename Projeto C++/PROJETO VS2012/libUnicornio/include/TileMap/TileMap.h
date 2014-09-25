@@ -22,9 +22,11 @@ public:
 	ObjetoTile* criarObjeto();
 	bool destruirObjeto(string nome);
 	bool destruirObjeto(ObjetoTile* obj);
+	bool existeObjetoNaPos(float tx, float ty);
+	bool existeObjetoDoTipoNaPos(string tipo, float tx, float ty);
 
-	void pixelParaTile(int px, int py, float& tx, float& ty);
-	void tileParaPixel(float tx, float ty, int& px, int& py);
+	void telaParaTile(int px, int py, float& tx, float& ty);
+	void tileParaTela(float tx, float ty, int& px, int& py);
 
 	bool tileECaminhavel(float tx, float ty);			//	verifica em todas as layers se o tile é caminhavel (leva em consideracao tiles de tamanho diferente)
 	int getCustoAdicionalNoTile(float tx, float ty);	//	verifica em todas as layers e soma o custo adicional (leva em consideracao tiles de tamanho diferente)
@@ -41,6 +43,9 @@ public:
 	int getLarguraTile();
 	int getAlturaTile();
 
+	int getNumTilesNaTelaEmX();
+	int getNumTilesNaTelaEmY();
+
 	int getNumLayers();
 	int getNumTileSets();
 	int getNumTiles();
@@ -56,8 +61,10 @@ public:
 	ObjetoTile* getObjeto(int indice);
 	ObjetoTile* getObjeto(string nome);
 	ObjetoTile* getObjetoNaPos(float tx, float ty);
+	ObjetoTile* getObjetoDoTipoNaPos(string tipo, float tx, float ty);
 	vector<ObjetoTile*> getObjetosDoTipo(string tipo);
 	vector<ObjetoTile*> getObjetosNaPos(float tx, float ty);
+	vector<ObjetoTile*> getObjetosDoTipoNaPos(string tipo, float tx, float ty);
 
 	string getPropriedade(string nome);
 	int getPropriedadeInt(string nome);
@@ -65,6 +72,7 @@ public:
 	bool getPropriedadeBool(string nome);
 
 	void obterPos(float& x, float& y);
+	void obterPosCentro(float& x, float& y);
 	void obterTamanhoEmTiles(int& larg, int& alt);
 	void obterTamanhoTile(int& larg, int& alt);
 
@@ -89,7 +97,7 @@ private:
 	vector<TileLayer> layers;
 	vector<TileSet> tilesets;
 	vector<Tile> tiles;
-	vector<ObjetoTile> objetos;
+	vector<ObjetoTile*> objetos;
 
 	float x;	//	pos x (em tiles) do primeiro tile 
 	float y;	//	pos y (em tiles) do primeiro tile 

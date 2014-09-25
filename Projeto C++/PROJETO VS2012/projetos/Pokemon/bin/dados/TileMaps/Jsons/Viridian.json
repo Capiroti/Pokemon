@@ -114,7 +114,7 @@
  "tilesets":[
         {
          "firstgid":1,
-         "image":"..\/TileSets\/TileSetCenario.png",
+         "image":"dados/tilemaps/TileSets/TileSetCenario.png",
          "imageheight":240,
          "imagewidth":256,
          "margin":0,
@@ -130,7 +130,7 @@
         }, 
         {
          "firstgid":241,
-         "image":"..\/TileSets\/TileSetPredios.png",
+         "image":"dados/tilemaps/TileSets/TileSetPredios.png",
          "imageheight":376,
          "imagewidth":262,
          "margin":0,

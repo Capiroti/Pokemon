@@ -86,7 +86,7 @@
  "tilesets":[
         {
          "firstgid":1,
-         "image":"dados/TileMaps/TileSets/TileSetCenario.png",
+         "image":"dados/tilemaps/TileSets/TileSetCenario.png",
          "imageheight":240,
          "imagewidth":256,
          "margin":0,

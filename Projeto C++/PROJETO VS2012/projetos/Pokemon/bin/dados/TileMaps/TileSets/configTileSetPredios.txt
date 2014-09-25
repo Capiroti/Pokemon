@@ -1,5 +1,5 @@
-dados/tilemaps/tilesets/TileSetPredios.png
-32 32
+dados/tilemaps/TileSets/TileSetPredios.png
+16 16
 
 # caminhavel
 *

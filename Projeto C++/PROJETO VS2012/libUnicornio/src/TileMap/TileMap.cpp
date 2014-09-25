@@ -187,21 +187,21 @@ bool TileMap::carregar(string arquivo)
 		objs = jLayers[i]["objects"];
 		for(int j = 0; j < objs.size(); ++j)
 		{
-			ObjetoTile o;
-			o.setNome(objs[j].get("name", "").asString());
-			o.setTipo(objs[j].get("type", "").asString());
+			ObjetoTile* o = new ObjetoTile();
+			o->setNome(objs[j].get("name", "").asString());
+			o->setTipo(objs[j].get("type", "").asString());
 
-			o.setPos(objs[j].get("x", 0).asFloat()/(float)largura_tile, objs[j].get("y", 0).asFloat()/(float)altura_tile);
-			o.setTamanho(objs[j].get("width", 0).asFloat()/(float)largura_tile, objs[j].get("height", 0).asFloat()/(float)altura_tile);
+			o->setPos(objs[j].get("x", 0).asFloat()/(float)largura_tile, objs[j].get("y", 0).asFloat()/(float)altura_tile);
+			o->setTamanho(objs[j].get("width", 0).asFloat()/(float)largura_tile, objs[j].get("height", 0).asFloat()/(float)altura_tile);
 
-			o.setVisivel(objs[j].get("visible", true).asBool());
+			o->setVisivel(objs[j].get("visible", true).asBool());
 
 			Json::Value props = objs[j].get("properties", -1);
 			for(unsigned int i = 0; i < props.getMemberNames().size(); ++i)
 			{
 				string nome = props.getMemberNames()[i];
 				string valor = props.get(nome, "").asString();
-				o.setPropriedade(nome, valor);
+				o->setPropriedade(nome, valor);
 			}
 
 			objetos.push_back(o);
@@ -286,6 +286,9 @@ void TileMap::descarregar()
 	for(int i = 0; i < tilesets.size(); ++i)
 		tilesets[i].descarregar();
 
+	for(int i = 0; i < objetos.size(); ++i)
+		delete objetos[i];
+
 	tiles.clear();
 	tilesets.clear();
 	layers.clear();
@@ -319,8 +322,8 @@ void TileMap::desenhar()
 	if(ity < 0)
 		ity = 0;
 
-	int ftx = (int)(itx + tiles_na_tela_x);
-	int fty = (int)(ity + (maior_altura_tile/altura_tile -1) + tiles_na_tela_y);
+	int ftx = (int)(itx + tiles_na_tela_x) + 1;
+	int fty = (int)(ity + (maior_altura_tile/altura_tile -1) + tiles_na_tela_y) + 1;
 
 	if(ftx > largura_em_tiles-1)
 		ftx = largura_em_tiles-1;
@@ -359,7 +362,7 @@ void TileMap::desenhar()
 	for(int o = prox_obj; o < objetos.size(); ++o)
 	{
 		float pxo, pyo;
-		objetos[o].obterPosCentro(pxo, pyo);
+		objetos[o]->obterPosCentro(pxo, pyo);
 		pxo += -x + desloc_x;
 		pyo += -y + desloc_y;
 		pxo *= largura_tile;
@@ -367,7 +370,7 @@ void TileMap::desenhar()
 
 		if(pyo < px0)
 		{
-			objetos[o].desenhar(pxo, pyo);
+			objetos[o]->desenhar(pxo, pyo);
 			prox_obj++;
 		}
 		else
@@ -381,7 +384,7 @@ void TileMap::desenhar()
 		for(int o = prox_obj; o < objetos.size(); ++o)
 		{
 			float pxo, pyo;
-			objetos[o].obterPosCentro(pxo, pyo);
+			objetos[o]->obterPosCentro(pxo, pyo);
 			pxo += -x + desloc_x;
 			pyo += -y + desloc_y;
 			pxo *= largura_tile;
@@ -389,7 +392,7 @@ void TileMap::desenhar()
 
 			if(pyo >= py && pyo <= py+altura_tile)
 			{
-				objetos[o].desenhar(pxo, pyo);
+				objetos[o]->desenhar(pxo, pyo);
 				prox_obj++;
 			}
 			else
@@ -418,13 +421,13 @@ void TileMap::desenhar()
 	for(int o = prox_obj; o < objetos.size(); ++o)
 	{
 		float px, py;
-		objetos[o].obterPosCentro(px, py);
+		objetos[o]->obterPosCentro(px, py);
 		px += -x + desloc_x;
 		py += -y + desloc_y;
 		px *= largura_tile;
 		py *= altura_tile;
 
-		objetos[o].desenhar(px, py);
+		objetos[o]->desenhar(px, py);
 	}
 
 	//	desenhar tiles acima dos objetos
@@ -451,15 +454,16 @@ void TileMap::desenhar()
 
 ObjetoTile* TileMap::criarObjeto()
 {
-	objetos.push_back(ObjetoTile());
-	return &objetos[objetos.size()-1];
+	objetos.push_back(new ObjetoTile());
+	return objetos[objetos.size()-1];
 }
 
 bool TileMap::destruirObjeto(string nome)
 {
 	for(int i = 0; i < objetos.size(); ++i)
-		if(objetos[i].getNome() == nome)
+		if(objetos[i]->getNome() == nome)
 		{
+			delete objetos[i];
 			objetos.erase(objetos.begin() + i);
 			return true;
 		}
@@ -470,8 +474,9 @@ bool TileMap::destruirObjeto(string nome)
 bool TileMap::destruirObjeto(ObjetoTile* obj)
 {
 	for(int i = 0; i < objetos.size(); ++i)
-		if(objetos[i] == *obj)
+		if(*objetos[i] == *obj)
 		{
+			delete objetos[i];
 			objetos.erase(objetos.begin() + i);
 			return true;
 		}
@@ -479,13 +484,50 @@ bool TileMap::destruirObjeto(ObjetoTile* obj)
 	return false;
 }
 
-void TileMap::pixelParaTile(int px, int py, float& tx, float& ty)
+bool TileMap::existeObjetoNaPos(float tx, float ty)
+{
+	float ox0, oy0, ox, oy;
+	for(int i = 0; i < objetos.size(); ++i)
+	{
+		objetos[i]->obterPos(ox0, oy0);
+		objetos[i]->obterTamanho(ox, oy);
+		ox += ox0;
+		oy += oy0;
+
+		if(tx >= ox0 && tx <= ox && ty >= oy0 && ty <= oy)
+			return true;
+	}
+
+	return false;
+}
+
+bool TileMap::existeObjetoDoTipoNaPos(string tipo, float tx, float ty)
+{
+	float ox0, oy0, ox, oy;
+	for(int i = 0; i < objetos.size(); ++i)
+	{
+		if(objetos[i]->getTipo() == tipo)
+		{
+			objetos[i]->obterPos(ox0, oy0);
+			objetos[i]->obterTamanho(ox, oy);
+			ox += ox0;
+			oy += oy0;
+
+			if(tx >= ox0 && tx <= ox && ty >= oy0 && ty <= oy)
+				return true;
+		}
+	}
+
+	return false;
+}
+
+void TileMap::telaParaTile(int px, int py, float& tx, float& ty)
 {
 	tx = x - desloc_x + (float)(px)/(float)(largura_tile);
 	ty = y - desloc_y + (float)(py)/(float)(altura_tile);
 }
 
-void TileMap::tileParaPixel(float tx, float ty, int& px, int& py)
+void TileMap::tileParaTela(float tx, float ty, int& px, int& py)
 {
 	px = (int)((tx - x + desloc_x)*largura_tile);
 	py = (int)((ty - y + desloc_y)*altura_tile);
@@ -599,12 +641,12 @@ float TileMap::getY()
 
 float TileMap::getXCentro()
 {
-	return x + (float)(largura_em_tiles)/2.0f;
+	return x + (getNumTilesNaTelaEmX()/2.0f);
 }
 
 float TileMap::getYCentro()
 {
-	return y + (float)(altura_em_tiles)/2.0f;
+	return y + (getNumTilesNaTelaEmY()/2.0f);
 }
 
 int TileMap::getLarguraEmTiles()
@@ -625,6 +667,26 @@ int TileMap::getLarguraTile()
 int TileMap::getAlturaTile()
 {
 	return altura_tile;
+}
+
+int TileMap::getNumTilesNaTelaEmX()
+{
+	float tiles_na_tela_em_x = (float)(res_x)/(float)(largura_tile);
+
+	if(tiles_na_tela_em_x > largura_em_tiles)
+		tiles_na_tela_em_x = largura_em_tiles;
+
+	return tiles_na_tela_em_x;
+}
+
+int TileMap::getNumTilesNaTelaEmY()
+{
+	float tiles_na_tela_em_y = (float)(res_y)/(float)(altura_tile);
+
+	if(tiles_na_tela_em_y > altura_em_tiles)
+		tiles_na_tela_em_y = altura_em_tiles;
+
+	return tiles_na_tela_em_y;
 }
 
 int TileMap::getNumLayers()
@@ -694,14 +756,14 @@ Tile* TileMap::getTile(int tx, int ty, string nomeLayer)
 
 ObjetoTile* TileMap::getObjeto(int indice)
 {
-	return &objetos[indice];
+	return objetos[indice];
 }
 
 ObjetoTile* TileMap::getObjeto(string nome)
 {
 	for(int i = 0; i < objetos.size(); ++i)
-		if(objetos[i].getNome() == nome)
-			return &objetos[i];
+		if(objetos[i]->getNome() == nome)
+			return objetos[i];
 
 	return NULL;
 }
@@ -711,13 +773,33 @@ ObjetoTile* TileMap::getObjetoNaPos(float tx, float ty)
 	float ox0, oy0, ox, oy;
 	for(int i = 0; i < objetos.size(); ++i)
 	{
-		objetos[i].obterPos(ox0, oy0);
-		objetos[i].obterTamanho(ox, oy);
+		objetos[i]->obterPos(ox0, oy0);
+		objetos[i]->obterTamanho(ox, oy);
 		ox += ox0;
 		oy += oy0;
 
 		if(tx >= ox0 && tx <= ox && ty >= oy0 && ty <= oy)
-			return &objetos[i];
+			return objetos[i];
+	}
+
+	return NULL;
+}
+
+ObjetoTile* TileMap::getObjetoDoTipoNaPos(string tipo, float tx, float ty)
+{
+	float ox0, oy0, ox, oy;
+	for(int i = 0; i < objetos.size(); ++i)
+	{
+		if(objetos[i]->getTipo() == tipo)
+		{
+			objetos[i]->obterPos(ox0, oy0);
+			objetos[i]->obterTamanho(ox, oy);
+			ox += ox0;
+			oy += oy0;
+
+			if(tx >= ox0 && tx <= ox && ty >= oy0 && ty <= oy)
+				return objetos[i];
+		}
 	}
 
 	return NULL;
@@ -728,8 +810,8 @@ vector<ObjetoTile*> TileMap::getObjetosDoTipo(string tipo)
 	vector<ObjetoTile*> r;
 
 	for(int i = 0; i < objetos.size(); ++i)
-		if(objetos[i].getTipo() == tipo)
-			r.push_back(&objetos[i]);
+		if(objetos[i]->getTipo() == tipo)
+			r.push_back(objetos[i]);
 
 	return r;
 }
@@ -740,13 +822,34 @@ vector<ObjetoTile*> TileMap::getObjetosNaPos(float tx, float ty)
 	float ox0, oy0, ox, oy;
 	for(int i = 0; i < objetos.size(); ++i)
 	{
-		objetos[i].obterPos(ox0, oy0);
-		objetos[i].obterTamanho(ox, oy);
+		objetos[i]->obterPos(ox0, oy0);
+		objetos[i]->obterTamanho(ox, oy);
 		ox += ox0;
 		oy += oy0;
 
 		if(tx >= ox0 && tx <= ox && ty >= oy0 && ty <= oy)
-			r.push_back(&objetos[i]);
+			r.push_back(objetos[i]);
+	}
+
+	return r;
+}
+
+vector<ObjetoTile*> TileMap::getObjetosDoTipoNaPos(string tipo, float tx, float ty)
+{
+	vector<ObjetoTile*> r;
+	float ox0, oy0, ox, oy;
+	for(int i = 0; i < objetos.size(); ++i)
+	{
+		if(objetos[i]->getTipo() == tipo)
+		{
+			objetos[i]->obterPos(ox0, oy0);
+			objetos[i]->obterTamanho(ox, oy);
+			ox += ox0;
+			oy += oy0;
+
+			if(tx >= ox0 && tx <= ox && ty >= oy0 && ty <= oy)
+				r.push_back(objetos[i]);
+		}
 	}
 
 	return r;
@@ -796,6 +899,12 @@ void TileMap::obterPos(float& x, float& y)
 	y = this->y;
 }
 
+void TileMap::obterPosCentro(float& x, float& y)
+{
+	x = getXCentro();
+	y = getYCentro();
+}
+
 void TileMap::obterTamanhoEmTiles(int& larg, int& alt)
 {
 	larg = largura_em_tiles;
@@ -826,18 +935,18 @@ void TileMap::setPos(float x, float y)
 
 void TileMap::setXCentro(float x)
 {
-	this->x = x - (float)(largura_em_tiles)/2.0f;
+	this->x = x - (getNumTilesNaTelaEmX()/2.0f);
 }
 
 void TileMap::setYCentro(float y)
 {
-	this->y = y - (float)(altura_em_tiles)/2.0f;
+	this->y = y - (getNumTilesNaTelaEmY()/2.0f);
 }
 
 void TileMap::setPosCentro(float x, float y)
 {
-	this->x = x - (float)(largura_em_tiles)/2.0f;
-	this->y = y - (float)(altura_em_tiles)/2.0f;
+	setXCentro(x);
+	setYCentro(y);
 }
 
 void TileMap::setPropriedade(string nome, string valor)
@@ -901,7 +1010,7 @@ void TileMap::ordenarObjetosPorYCentral()
 	bool ordenados = true;
 	for(int i = 1; i < objetos.size(); ++i)
 	{
-		if(objetos[i].getYCentro() < objetos[i-1].getYCentro())
+		if(objetos[i]->getYCentro() < objetos[i-1]->getYCentro())
 		{
 			ordenados = false;
 			break;
@@ -915,9 +1024,9 @@ void TileMap::ordenarObjetosPorYCentral()
 	{
 		for(int j = i+1; j < objetos.size(); ++j)
 		{
-			if(objetos[j].getYCentro() < objetos[i].getYCentro())
+			if(objetos[j]->getYCentro() < objetos[i]->getYCentro())
 			{
-				ObjetoTile temp = objetos[j];
+				ObjetoTile* temp = objetos[j];
 				objetos[j]= objetos[i];
 				objetos[i] = temp;
 			}
