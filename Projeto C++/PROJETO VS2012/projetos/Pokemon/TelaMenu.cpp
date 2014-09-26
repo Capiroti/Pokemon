@@ -1,33 +1,41 @@
 #include "TelaMenu.h"
 
-char maiusculas[4][7] = {{'A','B','C','D','E', 'F','.'},
-							{'G','H', 'I', 'J', 'K', 'L',','},
-							{'M','N','O','P','Q','R','S'},
-							{'T','U','V','W','X','Y','Z'}};
+float xNome=230;
+
+char maiusculas[28] = {'A','B','C','D','E', 'F','.',
+						 'G','H', 'I', 'J', 'K', 'L',',',
+						 'M','N','O','P','Q','R','S',
+						 'T','U','V','W','X','Y','Z'};
+
+int contadorLetras=0;
+
+
+
+void TelaMenu::setXYiniciais()
+{
+	this->_x = 80; 
+	this->_y = 200;
+}
 
 TelaMenu::TelaMenu()
 {
-	fonte.carregar("dados/mono.ttf");
+	fonte.carregar("dados/mono.ttf",20);
 	nome.setFonte(&fonte);
 	nome.setCor(0,0,0);
 
 	//posição inicial do retangulo
-	_x = 80; 
-	_y = 200;
-
-	xNome = 250;
-
-	//total de valores das matrizes de letras
-	totalValoresLinha = 4; //linhas
-	totalValoresColuna = 7; //colunas
-
-	indiceLinha=0;
-	indiceColuna=0;
+	setXYiniciais();
 
 	controle = 5;
 
-	int contadorLetras=0;
+	totalValoresColuna=7;
+	totalValoresLinha=4;
 
+	indiceColuna=0;
+	indiceLinha=0;
+
+	nomePersonagem[0]='\0';
+	
 	recursos.carregarSpriteSheet("fundo","dados/Menu/menu.jpg",1,1);
 	background.setSpriteSheet(recursos.getSpriteSheet("fundo"));
 
@@ -40,6 +48,14 @@ TelaMenu::TelaMenu()
 
 TelaMenu::~TelaMenu()
 {
+	fonte.descarregar();
+}
+
+void TelaMenu::DesenhaTexto(char *texto, float x, float y, float distancia)
+{
+	nome.setAncora(0,0.5);
+	nome.setTexto(texto);
+	nome.desenhar(x,y);		
 }
 
 void TelaMenu::controleLetras()
@@ -183,14 +199,22 @@ void TelaMenu::controleNumeros()
 
 int TelaMenu::desenhaInterface()
 {
-	int contadorLetras=0;
-
+	uniDepurar("nome",nomePersonagem);
 	if(teclado.pressionou[TECLA_F1])
+	{
 		controle = 1; //letras
+		setXYiniciais();
+	}
 	else if(teclado.pressionou[TECLA_F2])
+	{
 		controle = 2;//numeros
+		setXYiniciais();
+	}
 	else if(teclado.pressionou[TECLA_F3])
+	{
 		controle =5;//fundo
+		setXYiniciais();
+	}
 
 	background.desenhar(res_x/2, res_y/2);
 
@@ -209,15 +233,16 @@ int TelaMenu::desenhaInterface()
 		break;
 	}
 
-	//if(teclado.pressionou[TECLA_ENTER])
-	//{
-	//	nomePersonagem[contadorLetras]=maiusculas[indiceLinha][indiceColuna];
-	//	contadorLetras++;
-	//	//nome.setTexto(to_string());
-	//}
-
-	//nome.desenhar(xNome,140);
-	//xNome+=20;
+	if(teclado.pressionou[TECLA_ENTER])
+	{
+		if(contadorLetras<=6)
+		{
+			nomePersonagem[contadorLetras]=maiusculas[indiceColuna+indiceLinha*totalValoresColuna];	
+			nomePersonagem[contadorLetras+1]='\0';
+			contadorLetras++;
+		}
+	}
+	DesenhaTexto(nomePersonagem, 250, 140, 40);
 
 	uniDesenharRetangulo(_x, _y, 25, 35, 255, 0, 0, 255);
 
@@ -227,3 +252,5 @@ int TelaMenu::desenhaInterface()
 		return 0;
 
 }
+
+
