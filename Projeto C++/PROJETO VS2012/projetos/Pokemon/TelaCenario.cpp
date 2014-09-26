@@ -43,3 +43,15 @@ void TelaCenario::desenhaInterface(Personagem &player, string nomeObjeto, int ad
 	player.carregarAnimacao(mapa.getObjeto(nomeObjeto));
 	mapa.setPosCentro((player.getXcentral() + addXCentral), (player.getYcentral() + addYCentral));
 }
+
+int TelaCenario::verificarMudancaMapa(TileMap &mapa, Personagem &player)
+{
+	if(mapa.existeObjetoDoTipoNaPos("SaidaPallet",player.getX(),player.getY()))
+		return 5;
+	else if(mapa.existeObjetoDoTipoNaPos("SaidaRota01",player.getX(),player.getY()))
+		return 6;
+	else if(mapa.existeObjetoDoTipoNaPos("SaidaViridian",player.getX(),player.getY()))
+		return 7;
+	else
+		return 0;
+}

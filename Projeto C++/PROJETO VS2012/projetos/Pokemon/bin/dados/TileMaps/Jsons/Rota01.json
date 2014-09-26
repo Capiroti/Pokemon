@@ -24,7 +24,7 @@
         }, 
         {
          "draworder":"topdown",
-         "height":46,
+         "height":0,
          "name":"Camada de Objetos 1",
          "objects":[
                 {
@@ -68,11 +68,39 @@
                  "width":0,
                  "x":355,
                  "y":569
+                }, 
+                {
+                 "height":16,
+                 "name":"SaidaPallet",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"SaidaPallet",
+                 "visible":true,
+                 "width":32,
+                 "x":320,
+                 "y":663
+                }, 
+                {
+                 "height":16,
+                 "name":"SaidaViridian",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"SaidaViridian",
+                 "visible":true,
+                 "width":64,
+                 "x":290,
+                 "y":37
                 }],
          "opacity":1,
          "type":"objectgroup",
          "visible":true,
-         "width":40,
+         "width":0,
          "x":0,
          "y":0
         }],

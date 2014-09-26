@@ -10,7 +10,7 @@ void Jogo::controladorTelas()
 		{
 			//Pergunta pro usuario o sexo e carrega a animacao passando o sexo
 			player.setSexo(GAROTA);
-			indiceTela = CASAANDAR2; // depois do menu começa o jogo;
+			indiceTela = ROTA01; // depois do menu começa o jogo;
 			entrouCenario = true;
 		}
 		break;
@@ -36,11 +36,11 @@ void Jogo::controladorTelas()
 		}		
 		if(teclado.pressionou[TECLA_D])
 		{
-			indiceTela = VERIDIAN;
+			indiceTela = VIRIDIAN;
 			entrouCenario = true;
 		}
 		break;
-	case VERIDIAN:
+	case VIRIDIAN:
 		if(entrouCenario)
 		{
 			carregarCenario("dados/tilemaps/Jsons/Viridian.json","TileSetCenario" ,"dados/tilemaps/TileSets/ConfigTileSetCenario.txt",0,0);
@@ -52,6 +52,14 @@ void Jogo::controladorTelas()
 	{
 		player.atualizar();
 		testPlayerMapa();
+		
+		//setObj(mapa.getObjetoNaPos(player.getX(),player.getY()));
+		
+		if(mapa.existeObjetoDoTipoNaPos("SaidaPallet",player.getX(),player.getY()))
+			indiceTela = PALLET;
+		if(mapa.existeObjetoDoTipoNaPos("SaidaViridian",player.getX(),player.getY()))
+			indiceTela = VIRIDIAN;
+		//indiceTela = telaCenario->verificarMudancaMapa(mapa,player);
 	}
 }
 
@@ -118,7 +126,7 @@ void Jogo::testPlayerMapa()
 	case ROTA01:
 		mapa.setPosCentro(player.getXcentral(), player.getYcentral()+10);
 		break;
-	case VERIDIAN:
+	case VIRIDIAN:
 		mapa.setPosCentro(player.getXcentral()+10, player.getYcentral()+10);
 		break;
 	default:

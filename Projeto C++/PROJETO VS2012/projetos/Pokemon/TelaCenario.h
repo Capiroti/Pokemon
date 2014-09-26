@@ -30,5 +30,6 @@ public:
 	void carregaMapa(TileMap &mapa);
 	void carregaMapa(string json, string nomeTileSet, string caminhoTileSet, TileMap &mapa);
 	void desenhaInterface(Personagem &player, string nomeObjeto, int addXCentral, int addYCentral, TileMap &mapa);
+	int verificarMudancaMapa(TileMap &mapa, Personagem &player);
 };
 
