@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="13" height="9" tilewidth="16" tileheight="16">
+ <tileset firstgid="1" name="CasaRival" tilewidth="16" tileheight="16">
+  <image source="../TileSets/CasaRival.png" trans="ffffff" width="208" height="144"/>
+ </tileset>
+ <layer name="Camada de Tiles 1" width="13" height="9">
+  <data encoding="base64" compression="zlib">
+   eJwNwwNXgwEAAMCvlrlst2y7hVXLtm33/7t77xKCIEg0ZJLJpphqmulmmGmW2eaYa9g88y2w0CKLLbHUMsutsNIqq62x1jrrbbDRiE0222KrbbbbYadddttjr332O+CgQw474qhjjjvhpFNOG3XGWeecN+aCiy4Zd9kVV11z3Q033XLbHXfdc98DDz3y2BNPPfPcCy+98tobb73z3gcfffLZF199890PP/3y2x9//fMfuTAa+A==
+  </data>
+ </layer>
+ <objectgroup name="Camada de Objetos 1">
+  <object name="NPC1" type="NPC1" x="56" y="72"/>
+  <object name="Player" type="Player" x="104" y="121"/>
+  <object name="SaidaCasa" type="SaidaCasa" x="61" y="131" width="21" height="15"/>
+ </objectgroup>
+</map>

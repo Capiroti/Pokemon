@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="39" height="30" tilewidth="16" tileheight="16">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="40" height="50" tilewidth="16" tileheight="16">
  <tileset firstgid="1" name="TileSet" tilewidth="16" tileheight="16">
-  <image source="../TileSets/TileSet.png" trans="ffffff" width="256" height="240"/>
+  <image source="../TileSets/TileSet.png" trans="ffffff" width="496" height="240"/>
  </tileset>
- <tileset firstgid="241" name="TileSetPredios" tilewidth="16" tileheight="16">
-  <image source="../TileSets/TileSetPredios.png" trans="ffffff" width="262" height="376"/>
- </tileset>
- <layer name="Camada Inferior Tiles" width="39" height="30">
+ <layer name="Camada Inferior Tiles" width="40" height="50">
   <data encoding="base64" compression="zlib">
-   eJztlzsOwjAMhnMKykm4AzAxAifhDLDwmujEY6IT0DP0WjiilqwobRzpD0WikT6lgxW7XxO3zY0xJyIHzFfiBliHx4ZYg+YdsQeswwPhi2eurffWe+u9fd/bIMCqhmsLxSO9hXIx2tqQ3my/PygoiVcgRvPeiPFmfWxBaPZjjDdb24M4tvBUxmjOcaw3u2ZmPvslE9fuXtPEoL3JPd6WVxOTwhuqtn/yJnuDr1do+keZyBuyh3TR37Q9JIU3m7vyMBJ5NT0khTe77tDhF84psrZU3mZOPpm3y3Paltvm7ep9qu0Pmu87pLezx8GYmNRMhVffGeZrfqYIb3eiaHAwJxY1S0/tTVzEuqn+F9zatN/tMf8LhbiPphldWygfjzdlVC4z
+   eJztlk2u00AQhL0KJ4m5SM4BgYMAbwGcAsgCOCd+klsqfVS1x89BYhFLrcT2ePqb/qmZabrP9Wq1//V68B27HnzHrgffsevBd+z6V3ynxs5is/zO6/tZxhXf8/1Fnp/kWTL665g6PsdY928Xu673l+BLmWbwncM3W2yfFns3YLfFfmyMeRIexpDrHo3Zc1ze3MmuwlY+NJ7ls+PSnBXft8XeN/Z9cMxV/GvMlDGx6X+NM+uK5mqvG+N6o+PTmLkaUN+zmXPvGI2b5kzrkD1S90437s1X79mv+h3zWe+1Puvbkby8ZAzjxF7e0k3lU924TdvaksZUjDudJmPVpdaDznFvfVG/WmNa8+Sd5TvN9x79G9UXt6+xb6mL3AM1lqP61+VO9UVru/w6PuaWY9kfo/o3qi8n49Ppsfb2PP0dR/X9GnZE/7TW6NfVJfXnJXwj+uJ0JbFpH2jMtQZHfbuzy23y+kKd2OLTd/VNPU++ybGnf3kOYc5pTlu09ke1bXT/IJ/Tw8Sn/bxHn0diXPnleYV5drnl+aXm+BDy9XmxL6t93RFj1VbXy+wL5aMWMUcXmffnYr9W+x3WQPsI36oZjs/1jdaD2wPrOfncWFfzzJMyJh12fJpjV+/kUzbur6zxM/xo7BhTp9dbbKfAxzpnXVAj1Dje1ZY7W+ia1D/5trSCc8/mG+c79Yx7pmM7Po7leb2LB+utO5ewx9Wv6w/ujc53WrtycZzuaa7+XB8mPvafrol9yLU7NsaQ60t17voj9W6qSZdLjmHfpXrUuHZ8rh+0tzSWLo/pnt8z/srp+JjTlB+nNYknveMewBim+uv4Rv/zfOjm0Tpi3Dq+VGOj+XOMnE/j5vox8WnNOYbUl10tJj064z/Z5sDH3kg56yytRbmURedXZrd/0NKe1cUzsblfF9u67+KnvhJj0rrkVy2N0/uOz8Wh2+dGGPe+T3wpR1qXnRbR/gCltTcw
   </data>
  </layer>
- <layer name="Camada Superior Tiles" width="39" height="30">
+ <layer name="Camada Superior Tiles" width="40" height="50">
   <data encoding="base64" compression="zlib">
-   eJzt1clOwkAcx/GZKstVVDiDC76L2wOw+AAsngkIZ/cH0ItH1JcSEM+4Xv0ebMKhTadM6wxJf8knE5J/+v91kgYhljt7/8zmjrb2WvTewr7H/O8kaukEiPv5unRyh/sQZ/eP6rxOnvCMIR4VTrdb0Jz7XJ247/cQsSjvTXWne29Bc1Hcm1/2pRAHOMQRjuViM3Gkwp4qaqjjxGOvykwcabCniRbaOPXYqzITddbQZU8PZ+hjIMPPxJEiLtlzhWvc4FaGnzEZv2/UZF64nxHGmOAVU7xZcG8zOrzjA5/4wjd+LOgmHSEcrGAVKaSRcUw34xulQw7r2MAm8ihY0K1IhxK2sI0d7KJsuFvQ/6jp2NwtSRLdnONi7sx6zGQ95vxO1fwCwk6RiQ==
+   eJztlEdOA0EQRWcAiTuAQcicgmCZC5A3pB1bgmFDEicgb0hHIF8Dm3AlHoKWoNWmS55uj4XrS09lWdXV5eexi2mSDEIxYzXJOseundAVoJqEmmdqqM+p/tSf+lN/7eqvO/mi2f7KMCaoZj9fX2h/0uwL+0L7s3ewce35V09Mfz3QCwXog37Hfr6emP6GYBhGYBRKjv18PbH8fX5PczAPC7AIS9bdkp5Y/gZgC7ZhB3Zhz7pb0hPLXxnO4QIu4QqurbslPTGfvxDJ6/9Pmrz9jXNmAiZhCqZhBma/Z+Xtb4Uzq7AG61CBDdhM4/srpb9Zdux3wPuHcATHcAKncNYi/m44cwt3cA8P8AhPTfAnyTNnqlCDF3iFN3hvEX++5O3PF/VXP/Zv27z+GfWXLe3mL4UOR7VTr8+uof1JvTY6J6s/6XPZ6Bz1p/7Un/pTf+pP/am//+bvA/Ripqk=
   </data>
  </layer>
  <objectgroup name="Camada de Objetos 1">
-  <object name="Player" type="Player" x="220" y="295"/>
-  <object name="NPC1" type="NPC1" x="250" y="295"/>
-  <object name="NPC2" type="NPC2" x="278" y="295"/>
-  <object name="NPC3" type="NPC3" x="306" y="298"/>
-  <object name="NPC4" type="NPC4" x="304" y="328"/>
-  <object name="NPC5" type="NPC5" x="299" y="360"/>
+  <object name="Player" type="Player" x="210" y="330"/>
+  <object name="NPC1" type="NPC1" x="363" y="493"/>
+  <object name="NPC2" type="NPC2" x="249" y="394"/>
+  <object name="NPC3" type="NPC3" x="296" y="53"/>
+  <object name="EntradaRota01" type="EntradaRota01" x="283" y="145" width="39" height="16"/>
+  <object name="GramaPokemon" type="GramaPokemon" x="287" y="4" width="33" height="186"/>
+  <object name="CasaPersonagem" type="CasaPersonagem" x="192" y="287" width="15" height="16"/>
+  <object name="CasaInimigo" type="CasaInimigo" x="335" y="286" width="17" height="16"/>
+  <object name="Laboratorio" type="Laboratorio" x="365" y="395" width="20" height="19"/>
  </objectgroup>
 </map>

@@ -1,29 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="44" height="40" tilewidth="16" tileheight="16">
- <tileset firstgid="1" name="TileSetCenario" tilewidth="16" tileheight="16">
-  <image source="../TileSets/TileSetCenario.png" trans="ffffff" width="256" height="240"/>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="50" height="50" tilewidth="16" tileheight="16">
+ <tileset firstgid="1" name="TileSet" tilewidth="16" tileheight="16">
+  <image source="../TileSets/TileSet.png" trans="ffffff" width="496" height="240"/>
  </tileset>
- <tileset firstgid="241" name="TileSetPredios" tilewidth="16" tileheight="16">
-  <image source="../TileSets/TileSetPredios.png" trans="ffffff" width="262" height="376"/>
- </tileset>
- <layer name="Camada Inferior Tiles" width="44" height="40">
+ <layer name="Camada Inferior Tiles" width="50" height="50">
   <data encoding="base64" compression="zlib">
-   eJztl8kNwjAQRX2iBtoARAPsV0pga4ClAZqhBLiyiTtLAyx94EiJZI2csccehwgZ6QlBRuOnn2DGQghRKTnw5drnINlLjkjNXXIi8Pixb1Zji64Xt+8byeuT1jwlZ4QXo+9GAzU77B6Y7pVPvruUrbKGKbuE24994RodTW2X0LfIfI/pZ1jbKJEvXKPu6XsV+c9NqHxrgMS3T2RQUL4tSRPQJvStgvfQ+VJ6UFxD5ZtXf3HA11ftlbhuNPn67mcYPvmq2O5n2cyjm2UqFjVUX9NsYNrPKHMRx/5rMxvA/cHWJYSvaabC5jP1PtjMcUXMk5wU4Ws722J1nPOvyzOH1en+H0LNOxy+Oucy+8Z8ab5xPwvjm50JOOE+X/SE/hyQfe8L9/lCZWi4Dn9TcB43XXf1XUqmgVkh61N9x5JRYCaMvnPJDEFdd22ozWPB6EvJH8vJlegbfaNv9P1H3y/ktXSk
+   eJzVl2+O1DAMxVsGeo8Fpr0ESCDlFvMBiTvsAkICLsGyB1ngerRSLb15439JOwI+PE2ndR3/EttJS9d1ZdZx1QDXmoaEvPePMF7GV1bou+zs2xpvDz+lO4+ZOaJxiqMtsbTKWo/jTv49xmv41TiyLDW2W/xYMSIDP4vqW6t3rYatcbLx83209fpJxGPVaNSLss9q1MoRrTfn54++6z7Oeuh1X1aNXItDqyUtV5jjbo7/dtaH/nL8mvzfk2OxHxVZ+WJxiB8ZR9Ysq4fe57DmQ35HZT2QZ1D8MMdIfpE1K56TLMeR4nw1+3kdqBDHL2d+f682j7M+OfrpcHA+axycO6f+sqbZrmWuJT5cL5k/L0ez68F5c+rP69qrlbvkXC+6B7/MUsuR2VOFg22QWRv7G7B7PVbeHclmDw7OK1wLqzeMNPa7zubn3MTnci/LYeWUxTGCDa4Bxsoc3v6vzQmybOHQ5m3h0Pon7x3M8WX+/570Fd6J1lbrLbUceH3qL+eK9xZrDrV6430RawPnZVqvp4DBOh9wbp0gJs4rq+8ih3cmsXrAtPqfusu1qNnP8b/HMZBthgN9FLq24mvl4Lz6HEj8ZPtuLccAvmo5mAntojOH13eXmPF8zzUmY/M3QA1HRot95szh9V3OP81ur/18gOdc15mzndV3tb42kLbuH/gf89d6n3to5ryL+cd2t0aObuHA3Jb3ufa4B9d+W1zz+8PjYNsReJAj+23h2XnfHxGHFiuvA76DZy6uTdxfvDqX/U728JY6jzi43j0Ork08y3r7pdjxOWTrd9SiF7Oegl46LHJt9aFoPYTBWw95v5bjyawedDA4cB/2zokYg2UnDJNi43FYDItuZr1VOEZFGofXT72+a50NWvqu2C8sz1Y9d9YDa+Vv9F2LQ6t13A81FlmX70G/bdF9Y50Pyn3sodpcIAvWAZ8FCjzj+sf+x/2zte9qHFzX6Juf49rhL/elqTtn5PuTMlZNv7LyTuLkvnwNca/XzsRRnWu9Ffcz7svX0KE7z9NsnXu5z3bYyzRhz34T2FqSHskMrXmlcXA/4LFwvQ5kN5BvPtvw+UjzH3EwC+ZUxIPzxRwDSdtPsbcVGCvKK47bOkNgjfM8ae9EHFYdYqyFfls4MK6R7hcaC7WFg+PUxow4MnUSzSUzWhweQ9R/LB+1HBaDphqOrcoy/O8c0f74L3F4MUf7I/vYwsF17Y1dUw9aX82M73HU+vC48PoPYo3xyw==
   </data>
  </layer>
- <layer name="Camada Superior Tiles" width="44" height="40">
+ <layer name="Camada Superior Tiles" width="50" height="50">
   <data encoding="base64" compression="zlib">
-   eJzt2DdTAkEYxvEDFWNjBENjwtgYENMHMBZ2xsLOWNgZCzsDfgLtHUOvX8dsa46F/0Jm1nXlGO5YmPHemd8sc3NzPDwDy0HIMIxthCKsBzjUuEbKs4ddk1X3RMoTqdfwqnuSod8zl2Gc4wKXuMI1bnDr+nmu1X43sSWs+zHkvSPTPR7wiCc84wWvUl6r/crrqSJPD8/Ziz70YwCDQg6X2zDcSEEq0uBBOjLcP69ltd8jHAurnHeIXMMYwSjGMI4JIW8umfKQjwIUoghe+KS88e53klxTmMYMZjGHeSFvOZkqUIkqVMOPGtTa3K+8ynkXyLWIJSxjBatYE/I2kalZyBXgcRuCUlYd/a6TawOb2MI2QtiRPkfRTrz7Vc3Jt1hGx/5g51jtV/5+V+U12x/Cc48HPOIJz4prWe13X6Ias/0hPG6OpSAVafAoztFx/2C2P4Qnj2P5KEAhihTn6Lh/iHZ/qOBYJapQDX+C+pXnr/2hmXwtaEUAbQnq185x7n9/zwte8YZ3fOAzxrw6+k3nfZiBTGQhGzkxfh/r6NdLNh+KUYJSlCXo/iGaqSFbLepQjwY0JnG/QbK1owOd6EJ3Evdr5zj7b3zH6Te+89/6XdKc12q/uvPa/f+ZvMqvx+x8s9Xu38eq/sXMVq9n9/8Pqve3mNfq9Zx+nX6dfpOj3y+OdVaE
+   eJzt2TdvFEEYxvFdoLFNsk3sADe2STa5IbmxDUhkaDAmSESJjAtELIgdwaJB0BA/B1Eih4qPQA4VDfAf6VZejWY8tzOz3j15X+mn93w3e3uvH4edu7YwCJaiLcU+BQ2xnsZ5GhTn8d1Nc/noaeZQ5JFtHouxRNErLY8TgVql5aGa4UZQ5OE7D93Pvdx1c8jnLff55O6ah2vJr8e2XPOIKuT2kFDf0y5feZjWLXKYpZ1jO9CJZViOFdLz+cpjKLeHhfrehU2Ws+zguJ3Yhd3Yg73Scw1UHl2aGZ7jBV7iFV4r1pzl2HM4jwu4iEs5ykN8/Yn+GV/wFd+kGT7iNuvu4C7u4T4e5CyPKu6vRg2GY4S07g8ect8jPMYTPMWznOXRiCY0YyqmaeY1VdZ5yHMJf7n9L4HA8Dqz+nsV/a9PUnnKw2UOX3mYrn90ebzBW7zDe3zAwjA5H3kcC/XXgZHjpbXbYzOIub7Tf+AnfuG35vtdizrUY0yKecTreoKfoZGsHYXRqEWd5tgWtGIWZiseT+N6t6fMOUQe0zEDM9GCVs2xK7EKq7FG8XgaefQmyKPc2of9OICDisez3n/4Kts8TPue09hacmYA5rDNQ1R/e6WTuInN2NLP+cdiHMZjAiZazmGbh6hJ9MlhX4/PJqq7NMetQJ/JHMzFPMzHAss5XPJQ7a3jM4lMtpWc0px/LdZhPTZgo+UcLnmoKun7BYdwGEdwFD2Wc7jkIVcVqiU1hvNfxhVcxTX0Ws7hM49GNEmaLV9X0vKZR5ZzDPY85D2b2JO10zoknUHfWrEm2ldE18FJ936+94M2Fb3HnnSPVE75/P3IsmzzyPr9XLlcr3fzkpfr/sM2L3nfa1pv6mnlYeqmz3N8dpc8TN30+ZrPXuQxePJI8vcmz3nIVeRR5FFpefwHpc2jdg==
   </data>
  </layer>
  <objectgroup name="Camada de Objetos 1">
-  <object name="Player" type="Player" x="295" y="401"/>
-  <object name="NPC1" type="NPC1" x="332" y="397"/>
-  <object name="NPC2" type="NPC2" x="362" y="402"/>
-  <object name="NPC3" type="NPC3" x="394" y="403"/>
-  <object name="NPC4" type="NPC4" x="430" y="399"/>
-  <object name="SaidaRota01" type="SaidaRota01" x="270" y="558" width="64" height="16"/>
-  <object name="PortaLoja" type="PortaLoja" x="495" y="255" width="16" height="16"/>
-  <object name="PortaCentro" type="PortaCentro" x="330" y="365" width="16" height="16"/>
+  <object name="Player" type="Player" x="401" y="615"/>
+  <object name="EntradaRota01" type="EntradaRota01" x="366" y="656" width="63" height="23"/>
+  <object name="PortaCentro" type="PortaCentro" x="431" y="493" width="17" height="20"/>
+  <object name="PortaLoja" type="PortaLoja" x="589" y="378" width="19" height="22"/>
+  <object name="PortaGinasio" type="PortaGinasio" x="589" y="232" width="21" height="23"/>
+  <object name="NPC1" type="NPC1" x="651" y="504"/>
+  <object name="NPC2" type="NPC2" x="299" y="506"/>
+  <object name="NPC3" type="NPC3" x="292" y="368"/>
+  <object name="NPC4" type="NPC4" x="391" y="166"/>
  </objectgroup>
 </map>

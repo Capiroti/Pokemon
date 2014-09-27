@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="13" height="13" tilewidth="16" tileheight="16">
+ <tileset firstgid="1" name="Laboratorio" tilewidth="16" tileheight="16">
+  <image source="../TileSets/Laboratorio.png" trans="ffffff" width="208" height="224"/>
+ </tileset>
+ <layer name="Camada de Tiles 1" width="13" height="13">
+  <data encoding="base64" compression="zlib">
+   eJwNwwdXDgAAAMAvlQgVCWU0UMmuRAtthcqqSKXQIjuhNJGSTYlEKvEvu3vvggKBwAqDDTHUlYa5ytWGu8a1rjPCSKNc7waj3WiMm9zsFmONc6vb3O4O400w0SR3usvdJptiqntMc6/73O8BD3rIw6abYaZHzPKox8w2x1zzzPe4JzxpgYUWWWyJpZZ5ynIrPO0Zz1ppldWe87wXvOgla6y1zstesd6rNthok9dstsXr3vCmrbbZboed3vK2Xd7xrve87wMf+shuH9vjE5/6zF77fG6/Aw465LAjvvClrxz1tWOO+8YJ3/rO937wo5/87Be/OumU35z2uz+c8aez/vK3c/5x3gUX/euS//zvMv9XOB4=
+  </data>
+ </layer>
+ <objectgroup name="Camada de Objetos 1">
+  <object name="SaidaLaboratorio" type="SaidaLaboratorio" x="91" y="194" width="24" height="16"/>
+  <object name="Player" type="Player" x="137" y="182"/>
+  <object name="NPC1" type="NPC1" x="32" y="167"/>
+  <object name="NPC2" type="NPC2" x="65" y="62"/>
+  <object name="NPC3" type="NPC3" x="89" y="60"/>
+  <object name="NPC4" type="NPC4" x="61" y="110"/>
+  <object name="Pokebola3" type="Pokebola3" x="160" y="69" width="13" height="12"/>
+  <object name="Pokebola2" type="Pokebola2" x="144" y="69" width="13" height="12"/>
+  <object name="Pokebola1" type="Pokebola1" x="132" y="69" width="13" height="12"/>
+ </objectgroup>
+</map>

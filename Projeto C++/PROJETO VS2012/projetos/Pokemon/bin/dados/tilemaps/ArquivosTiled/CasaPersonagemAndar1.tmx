@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="12" height="10" tilewidth="16" tileheight="16">
+ <tileset firstgid="1" name="CasaPersonagemA1" tilewidth="16" tileheight="16">
+  <image source="../TileSets/CasaPersonagemA1.png" trans="ffffff" width="192" height="160"/>
+ </tileset>
+ <layer name="Camada de Tiles 1" width="12" height="10">
+  <data encoding="base64" compression="zlib">
+   eJwNw4NSRAEAAMCX3WXjsm1etm3brs9vd2ajgiCINsZY44w3wUSTTDbFVNNMN2SGmWaZbY655plvgYUWWWyJpZZZbtgKK62y2hprrbPeBhttstkWW22z3Q477bLbHnvts98BBx1y2BFHjTjmuBNOOuW0M84657wLLrrksiuuuua6G2665bY77rrnvgceeuSxJ5565rkXXnrltTfeeue9Dz765LMvvvrmux9++uW3P/765z8IDhxd
+  </data>
+ </layer>
+ <objectgroup name="Camada de Objetos 1">
+  <object name="NPC1" type="NPC1" x="86" y="55"/>
+  <object name="Player" type="Player" x="151" y="76"/>
+  <object name="SaidaCasa" type="SaidaCasa" x="42" y="130" width="25" height="17"/>
+  <object name="EntradaSegundoAndar" type="EntradaSegundoAndar" x="159" y="28" width="33" height="23"/>
+ </objectgroup>
+</map>
