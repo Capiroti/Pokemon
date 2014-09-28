@@ -68,7 +68,7 @@
          "name":"CasaPersonagemA2",
          "properties":
             {
-
+	     "config": "dados/tilemaps/TileSets/ConfigTileSetCasaPersonagemA2.txt"
             },
          "spacing":0,
          "tileheight":16,

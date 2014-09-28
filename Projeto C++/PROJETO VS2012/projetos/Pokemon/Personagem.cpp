@@ -69,7 +69,7 @@ void Personagem::carregarAnimacao(ObjetoTile* obj)
 	nextX = 0;
 	nextY = 0;							
 	interpolador = 0.0f;
-	vel = 1.0;
+	vel = 1.5;
 }
 
 void Personagem::atualizarAnimacao(ObjetoTile* obj)

@@ -29,6 +29,8 @@ protected:
 	TelaMenu *telaMenu;
 	TelaCenario *telaCenario;
 
+	ObjetoTile *obj;
+
 	
 	TileMap mapa;
 	
