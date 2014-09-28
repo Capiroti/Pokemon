@@ -1,49 +1,36 @@
 #include "TelaMenu.h"
 
-float xNome=230;
-
-char maiusculas[28] = {'A','B','C','D','E', 'F','.',
-						 'G','H', 'I', 'J', 'K', 'L',',',
-						 'M','N','O','P','Q','R','S',
-						 'T','U','V','W','X','Y','Z'};
-
-int contadorLetras=0;
-
-
-
-void TelaMenu::setXYiniciais()
-{
-	this->_x = 80; 
-	this->_y = 200;
-}
 
 TelaMenu::TelaMenu()
 {
 	fonte.carregar("dados/mono.ttf",20);
+
+	_x2 = 482;
+	_y2 = 185;
+
 	nome.setFonte(&fonte);
 	nome.setCor(0,0,0);
+
+	opcaoF.setFonte(&fonte);
+	opcaoF.setCor(70,130,180);
+
+	opcaoM.setFonte(&fonte);
+	opcaoM.setCor(70,130,180);
+
+	opcaoM.setTexto("MENINO");
+	opcaoF.setTexto("MENINA");
 
 	//posição inicial do retangulo
 	setXYiniciais();
 
-	controle = 5;
-
-	totalValoresColuna=7;
-	totalValoresLinha=4;
-
-	indiceColuna=0;
-	indiceLinha=0;
+	//carrega os sprites
+	carregarSprites();
 
 	nomePersonagem[0]='\0';
-	
-	recursos.carregarSpriteSheet("fundo","dados/Menu/menu.jpg",1,1);
-	background.setSpriteSheet(recursos.getSpriteSheet("fundo"));
 
-	recursos.carregarSpriteSheet("menu1","dados/Menu/letras.jpg",1,1);
-	letras.setSpriteSheet(recursos.getSpriteSheet("menu1"));
-	
-	recursos.carregarSpriteSheet("menu2","dados/Menu/numeros.jpg",1,1);
-	numeros.setSpriteSheet(recursos.getSpriteSheet("menu2"));	
+	contadorLetras = 0; 
+	controle = 5;
+	sexo=0;
 }
 
 TelaMenu::~TelaMenu()
@@ -51,7 +38,138 @@ TelaMenu::~TelaMenu()
 	fonte.descarregar();
 }
 
-void TelaMenu::DesenhaTexto(char *texto, float x, float y, float distancia)
+int TelaMenu::getSexo(){ return sexo;}
+
+string TelaMenu::getNome(){ return nomePersonagem; }
+
+void TelaMenu::carregarSprites()
+{
+	//parte de escolher o sexo
+	recursos.carregarSpriteSheet("fundoEscolhaSexo","dados/Menu/EscolhaSexo/fundo.png",1,1);
+	fundoEscolhaSexo.setSpriteSheet(recursos.getSpriteSheet("fundoEscolhaSexo"));
+
+	recursos.carregarSpriteSheet("opcoes","dados/Menu/EscolhaSexo/opcoes.png",1,1);
+	opcoes.setSpriteSheet(recursos.getSpriteSheet("opcoes"));
+
+	recursos.carregarSpriteSheet("navegacao","dados/Menu/EscolhaSexo/navegacao.png",1,1);
+	navegacao.setSpriteSheet(recursos.getSpriteSheet("navegacao"));
+
+	//parte de escolher o nome
+	recursos.carregarSpriteSheet("letrasMai","dados/Menu/EscolhaNome/letrasMa.jpg",1,1);
+	letrasMai.setSpriteSheet(recursos.getSpriteSheet("letrasMai"));
+
+	recursos.carregarSpriteSheet("letrasMin","dados/Menu/EscolhaNome/letrasMi.jpg",1,1);
+	letrasMin.setSpriteSheet(recursos.getSpriteSheet("letrasMin"));
+
+	recursos.carregarSpriteSheet("numeros","dados/Menu/EscolhaNome/numeros.jpg",1,1);
+	numeros.setSpriteSheet(recursos.getSpriteSheet("numeros"));	
+}
+
+void TelaMenu::setXYiniciais()
+{
+	this->_x = 80; 
+	this->_y = 200;
+	this->indiceColuna=0;
+	this->indiceLinha=0;
+}
+
+void TelaMenu::setValoresLinhaColuna(int l, int c)
+{
+	totalValoresLinha = l;
+	totalValoresColuna = c;
+}
+
+//inicializa array de caracteres com os valores da tabela ascii
+void TelaMenu::inicializaArrayCaracteres(int tipo) 
+{
+	int i,j,vinicial,vfinal;
+
+	switch (tipo)
+	{
+	case 1: //minusculas
+		vinicial = 97;
+		vfinal = 122;
+		break;
+	case 2: //numeros
+		vinicial = 48;
+		vfinal = 57;
+		break;
+	case 5: //maiusculas
+		vinicial = 65;
+		vfinal = 90;
+		break;
+	}
+
+	for(i=0,j=vinicial;i<(totalValoresColuna*totalValoresLinha),j<vfinal;i++,j++)
+	{
+		if(tipo!=2) // diferente de numeros
+		{
+			if(i==6)
+			{
+				caracteres[i]=46;
+				j--;
+			}
+			else if(i==13)
+			{
+				caracteres[i]=44;
+				j--;
+			}
+			else
+			{
+				caracteres[i]=j;
+			}
+		}
+		else // se forem os numeros
+		{
+			switch(i)
+			{
+			case 10:
+				caracteres[i]=33;
+				break;
+			case 11:
+				caracteres[i]=63;
+				break;
+			case 12:
+				caracteres[i]=123;
+				break;
+			case 13:
+				caracteres[i]=125;
+				break;
+			case 14:
+				caracteres[i]=47;
+				break;
+			case 15:
+				caracteres[i]=249;
+				break;
+			case 16:
+				caracteres[i]=34;
+				break;
+			case 17:
+				caracteres[i]=34;
+				break;
+			case 18:
+				caracteres[i]=39;
+				break;
+			case 19:
+				caracteres[i]=39;
+				break;
+			default:
+				caracteres[i]=j;
+			}
+			
+		}
+
+	}
+}
+
+void TelaMenu::setArray_SetValores(int linhas, int colunas, int tipo)
+{
+	setValoresLinhaColuna(linhas,colunas);
+	caracteres = new char[totalValoresLinha*totalValoresColuna];
+	inicializaArrayCaracteres(tipo);
+}
+
+void TelaMenu::DesenhaTexto(char *texto, float x, float y)
 {
 	nome.setAncora(0,0.5);
 	nome.setTexto(texto);
@@ -146,10 +264,7 @@ void TelaMenu::controleNumeros()
 	{
 		if(_x==300)
 		{
-			if(_y!=280)
-				_x-=220;
-			else
-				_x+=55;
+			_x-=220;
 		}
 		else if(_x==355)
 			_x-=275;
@@ -197,60 +312,136 @@ void TelaMenu::controleNumeros()
 	}
 }
 
-int TelaMenu::desenhaInterface()
+int TelaMenu::desenhaInterfaceNome()
 {
+
 	uniDepurar("nome",nomePersonagem);
+	uniDepurar("sexo",sexo);
+
 	if(teclado.pressionou[TECLA_F1])
 	{
-		controle = 1; //letras
+		controle=1; //minusculas
 		setXYiniciais();
 	}
 	else if(teclado.pressionou[TECLA_F2])
 	{
-		controle = 2;//numeros
+		controle=2;//numeros
 		setXYiniciais();
 	}
 	else if(teclado.pressionou[TECLA_F3])
 	{
-		controle =5;//fundo
+		controle=5;//maiusculas
 		setXYiniciais();
 	}
 
-	background.desenhar(res_x/2, res_y/2);
+	letrasMai.desenhar(res_x/2, res_y/2);
 
 	switch(controle)
 	{
 	case 1:
-		letras.desenhar(300,280);
+		letrasMin.desenhar(300,280);
 		controleLetras();
+		setArray_SetValores(4, 7, controle);
 		break;
 	case 2:
 		numeros.desenhar(300,280);
 		controleNumeros();
+		setArray_SetValores(4, 5, controle);
 		break;
 	case 5:
 		controleLetras();
+		setArray_SetValores(4, 7, controle);
 		break;
 	}
 
-	if(teclado.pressionou[TECLA_ENTER])
-	{
-		if(contadorLetras<=6)
-		{
-			nomePersonagem[contadorLetras]=maiusculas[indiceColuna+indiceLinha*totalValoresColuna];	
-			nomePersonagem[contadorLetras+1]='\0';
-			contadorLetras++;
-		}
-	}
-	DesenhaTexto(nomePersonagem, 250, 140, 40);
+	//desenha o nome do personagem na tela
+	DesenhaTexto(nomePersonagem, 250, 140);
 
+	//desenha o retângulo conforme o usuário mexe nas direcionais
 	uniDesenharRetangulo(_x, _y, 25, 35, 255, 0, 0, 255);
 
-	if(mouse.pressionou[BOTAO_DIR])
-		return 1;
-	else
-		return 0;
+	if(teclado.pressionou[TECLA_X])
+	{
+		if(contadorLetras<=6)// enquanto nao passar do limite vai preenchendo com os valores preenchidos
+			nomePersonagem[contadorLetras]=caracteres[indiceColuna+indiceLinha*totalValoresColuna];	
 
+		nomePersonagem[contadorLetras+1]='\0'; // coloca sempre o '\0' depois de cada caracter lido
+		contadorLetras++;
+	}
+
+	else if(teclado.pressionou[TECLA_C])
+	{
+		if(contadorLetras>0)
+		{
+			contadorLetras--;
+			nomePersonagem[contadorLetras]=NULL;
+		}
+	}
+
+	//enter: sai do menu e entra no jogo
+	if(teclado.pressionou[TECLA_ENTER])
+	{
+		if(strlen(nomePersonagem)>3)
+		{
+			ofstream gravaDados;
+			
+			char caminho[50]="dados/Arquivos/Players/";
+			strcat(nomePersonagem,".txt");
+			strcat(caminho,nomePersonagem);
+			gravaDados.open(caminho);
+			gravaDados  << nomePersonagem << endl;
+			gravaDados << sexo << endl;
+			gravaDados.close();
+			return 2;
+		}
+		else
+	
+			return 0;
+	}
+	else 
+		return 0;
 }
 
+int TelaMenu::desenhaInterfaceSexo()
+{
+	fundoEscolhaSexo.desenhar(res_x/2,res_y/2);
+	opcoes.desenhar(520,200);
 
+	if(teclado.pressionou[TECLA_BAIXO])
+		_y2 = 215;
+	else if(teclado.pressionou[TECLA_CIMA])
+		_y2 = 185;
+
+	navegacao.desenhar(_x2,_y2);
+	opcaoF.desenhar(525,185);
+	opcaoM.desenhar(525,215);
+
+	if(teclado.pressionou[TECLA_ENTER])
+	{
+		if(_y2==185)
+			sexo = 1;
+		else if(_y2==215)
+			sexo = 0;
+		proximaTela = desenhaInterfaceNome();
+		if(proximaTela==2)
+			return 1;
+		else
+		return 0;
+	}
+	
+	
+}
+
+int TelaMenu::controladorTelasIniciais()
+{
+	telaAtual = desenhaInterfaceSexo();  // 1 sai da tela, 0 continua
+
+	if(telaAtual==1)
+		proximaTela = desenhaInterfaceNome(); //1 sai da tela, 0 continua
+
+	if(proximaTela==2)
+		return 1;
+
+	else 
+		return 0;
+}
