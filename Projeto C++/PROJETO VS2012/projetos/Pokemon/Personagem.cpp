@@ -105,6 +105,12 @@ bool Personagem::getSpritesCarregados(){ return this->spritesCarregados;}
 
 void Personagem::setSpritesCarregados(bool spritesCarregados){ this->spritesCarregados = spritesCarregados;}
 
+vector<Pokemon> Personagem::getListaPokemon(){return this->listaPokemon;}
+Pokemon Personagem::getPokemon(int indice){return listaPokemon[indice];}
+
+void Personagem::setListaPokemon(vector<Pokemon> listaPokemon){this->listaPokemon = listaPokemon;}
+void Personagem::setPokemon(Pokemon pokemon){this->listaPokemon.push_back(pokemon);}
+
 Personagem::Personagem()
 {
 	vel = 0.4;

@@ -3,6 +3,7 @@
 #include "personagem.h"
 #include "TelaMenu.h"
 #include "TelaCenario.h"
+#include "Pokemon.h"
 #include "libUnicornio.h"
 
 #define INICIAL 1000
@@ -24,7 +25,7 @@ protected:
 	TileMap mapa;
 	Sprite fundo;
 	GerenciadorDeRecursos recursos;
-	bool entrouCenario;
+	bool entrouCenario, encontrouPokemon;
 
 public:
 	
@@ -34,7 +35,8 @@ public:
 	void controladorTelas();
 	void carregarCenario(string json,string nomeTileSet, string caminhoTileSet, int addPosXcentral, int addPosYcentral);
 	void testPlayerMapa();
-	void criaPokemon(int idPokemon);
+	Pokemon criaPokemon(int idPokemon);
+	void colisaoGrama();
 	void inicializar();
 	void executar();
 	void finalizar();

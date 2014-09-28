@@ -1,5 +1,6 @@
 #pragma once
 #include "Pessoa.h"
+#include "Pokemon.h"
 #include "libunicornio.h"
 
 #define GAROTO 0
@@ -17,12 +18,19 @@ private:
 	bool movendo, spritesCarregados;
 	float oldX, oldY, nextX, nextY, interpolador;
 	ObjetoTile* objeto;
+	vector<Pokemon> listaPokemon;
 
 public:
 
 	bool getSpritesCarregados();
 
 	void setSpritesCarregados(bool spritesCarregados);
+
+	vector<Pokemon> getListaPokemon();
+	Pokemon getPokemon(int indice);
+
+	void setListaPokemon(vector<Pokemon> listaPokemon);
+	void setPokemon(Pokemon pokemon);
 
 
 	void carregarAnimacao(ObjetoTile* obj);
