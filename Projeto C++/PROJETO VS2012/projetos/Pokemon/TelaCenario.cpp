@@ -44,14 +44,26 @@ void TelaCenario::desenhaInterface(Personagem &player, string nomeObjeto, int ad
 	mapa.setPosCentro((player.getXcentral() + addXCentral), (player.getYcentral() + addYCentral));
 }
 
-int TelaCenario::verificarMudancaMapa(TileMap &mapa, Personagem &player)
+void TelaCenario::verificarMudancaMapa(TileMap &mapa, Personagem &player, int &indiceTela)
 {
-	if(mapa.existeObjetoDoTipoNaPos("SaidaPallet",player.getX(),player.getY()))
-		return 5;
-	else if(mapa.existeObjetoDoTipoNaPos("SaidaRota01",player.getX(),player.getY()))
-		return 6;
-	else if(mapa.existeObjetoDoTipoNaPos("SaidaViridian",player.getX(),player.getY()))
-		return 7;
-	else
-		return 0;
+	if(mapa.existeObjetoDoTipoNaPos("EntradaPrimeiroAndar",player.getXcentral(),player.getYcentral()))
+		indiceTela = CASAANDAR1;
+	else if(mapa.existeObjetoDoTipoNaPos("EntradaSegundoAndar",player.getXcentral(),player.getYcentral()))
+		indiceTela = CASAANDAR2;
+	else if(mapa.existeObjetoDoTipoNaPos("SaidaCasa",player.getXcentral(),player.getYcentral()))
+		indiceTela = PALLET;
+	else if(mapa.existeObjetoDoTipoNaPos("EntradaLaboratorio",player.getXcentral(),player.getYcentral()))	
+		indiceTela = LABORATORIO;
+	else if(mapa.existeObjetoDoTipoNaPos("SaidaLaboratorio",player.getXcentral(),player.getYcentral()))
+		indiceTela = PALLET;
+	else if(mapa.existeObjetoDoTipoNaPos("CasaPersonagem",player.getXcentral(),player.getYcentral()))	
+		indiceTela = CASAANDAR1;
+	else if(mapa.existeObjetoDoTipoNaPos("CasaRival",player.getXcentral(),player.getYcentral()))
+		indiceTela = CASAINIMIGO;
+	else if(mapa.existeObjetoDoTipoNaPos("EntradaRota01",player.getXcentral(),player.getYcentral()))
+		indiceTela = ROTA01;
+	else if(mapa.existeObjetoDoTipoNaPos("EntradaViridian",player.getXcentral(),player.getYcentral()))
+		indiceTela = VIRIDIAN;
+	else if(mapa.existeObjetoDoTipoNaPos("EntradaPallet",player.getXcentral(),player.getYcentral()))
+		indiceTela = PALLET;
 }

@@ -9,7 +9,11 @@
   </data>
  </layer>
  <objectgroup name="Camada de Objetos 1">
-  <object name="Player" type="Player" x="85" y="112"/>
-  <object name="EntradaPrimeiroAndar" type="EntradaPrimeiroAndar" x="114" y="29" width="29" height="26"/>
+  <object name="Player" type="Player" x="44" y="94"/>
+  <object name="EntradaPrimeiroAndar" type="EntradaPrimeiroAndar" x="114" y="29" width="29" height="26">
+   <properties>
+    <property name="config" value="dados/tilemaps/TileSets/ConfigCasaAndar2.txt"/>
+   </properties>
+  </object>
  </objectgroup>
 </map>

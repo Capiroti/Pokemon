@@ -13,7 +13,7 @@
         }, 
         {
          "draworder":"topdown",
-         "height":9,
+         "height":0,
          "name":"Camada de Objetos 1",
          "objects":[
                 {
@@ -27,15 +27,14 @@
                  "type":"Player",
                  "visible":true,
                  "width":0,
-                 "x":85,
-                 "y":112
+                 "x":44,
+                 "y":94
                 }, 
                 {
                  "height":26,
                  "name":"EntradaPrimeiroAndar",
                  "properties":
                     {
-
                     },
                  "rotation":0,
                  "type":"EntradaPrimeiroAndar",
@@ -47,7 +46,7 @@
          "opacity":1,
          "type":"objectgroup",
          "visible":true,
-         "width":11,
+         "width":0,
          "x":0,
          "y":0
         }],
@@ -68,7 +67,7 @@
          "name":"CasaPersonagemA2",
          "properties":
             {
-	     "config": "dados/tilemaps/TileSets/ConfigTileSetCasaPersonagemA2.txt"
+
             },
          "spacing":0,
          "tileheight":16,

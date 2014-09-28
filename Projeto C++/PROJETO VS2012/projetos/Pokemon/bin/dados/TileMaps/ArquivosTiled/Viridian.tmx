@@ -14,8 +14,8 @@
   </data>
  </layer>
  <objectgroup name="Camada de Objetos 1">
-  <object name="Player" type="Player" x="401" y="615"/>
-  <object name="EntradaRota01" type="EntradaRota01" x="366" y="656" width="63" height="23"/>
+  <object name="Player" type="Player" x="398" y="694"/>
+  <object name="EntradaRota01" type="EntradaRota01" x="367" y="707" width="63" height="23"/>
   <object name="PortaCentro" type="PortaCentro" x="431" y="493" width="17" height="20"/>
   <object name="PortaLoja" type="PortaLoja" x="589" y="378" width="19" height="22"/>
   <object name="PortaGinasio" type="PortaGinasio" x="589" y="232" width="21" height="23"/>

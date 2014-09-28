@@ -13,7 +13,7 @@
         }, 
         {
          "draworder":"topdown",
-         "height":10,
+         "height":0,
          "name":"Camada de Objetos 1",
          "objects":[
                 {
@@ -41,8 +41,8 @@
                  "type":"Player",
                  "visible":true,
                  "width":0,
-                 "x":151,
-                 "y":76
+                 "x":146,
+                 "y":39
                 }, 
                 {
                  "height":17,
@@ -75,7 +75,7 @@
          "opacity":1,
          "type":"objectgroup",
          "visible":true,
-         "width":12,
+         "width":0,
          "x":0,
          "y":0
         }],

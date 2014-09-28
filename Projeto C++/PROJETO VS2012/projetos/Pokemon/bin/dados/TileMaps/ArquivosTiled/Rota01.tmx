@@ -14,7 +14,7 @@
   </data>
  </layer>
  <objectgroup name="Camada de Objetos 1">
-  <object name="Player" type="Player" x="349" y="396"/>
+  <object name="Player" type="Player" x="336" y="691"/>
   <object name="NPC1" type="NPC1" x="459" y="475"/>
   <object name="NPC2" type="NPC2" x="248" y="308"/>
   <object name="NPC3" type="NPC3" x="444" y="171"/>

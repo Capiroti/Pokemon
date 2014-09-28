@@ -75,7 +75,7 @@
  "tilesets":[
         {
          "firstgid":1,
-         "image":"C:\/Users\/Pedro\/Desktop\/PROJETO VS2012\/projetos\/Pokemon\/bin\/dados\/tilemaps\/TileSets\/CasaRival.png",
+         "image":"dados/tilemaps/TileSets/CasaRival.png",
          "imageheight":144,
          "imagewidth":208,
          "margin":0,

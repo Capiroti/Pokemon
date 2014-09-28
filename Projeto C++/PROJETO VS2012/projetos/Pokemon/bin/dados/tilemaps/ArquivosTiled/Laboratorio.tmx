@@ -10,7 +10,7 @@
  </layer>
  <objectgroup name="Camada de Objetos 1">
   <object name="SaidaLaboratorio" type="SaidaLaboratorio" x="91" y="194" width="24" height="16"/>
-  <object name="Player" type="Player" x="137" y="182"/>
+  <object name="Player" type="Player" x="104" y="180"/>
   <object name="NPC1" type="NPC1" x="32" y="167"/>
   <object name="NPC2" type="NPC2" x="65" y="62"/>
   <object name="NPC3" type="NPC3" x="89" y="60"/>
